@@ -16,26 +16,24 @@
     <label for="email">Email principal</label><br>
     <input type="email" id="email" name="email" placeholder="@gmail.com" required><br><br>
     
-    <button type="submit">Guardar cambios</button></div>
+    <button type="submit" id="boton-guardar-cambios">Guardar cambios</button></div>
       <br>
-    <p class="contraseña">
+    <p class="contraseña" id="contra">
       contraseña 
        <form action="#" method="post">
     <div class="form-container">
       <input type="password" id="password" name="password" placeholder="" required>
-      <button type="submit"><i class="fa fa-pencil-alt"></i> Cambiar</button>
+      <button type="submit" id="boton-cambiar"><i class="fa fa-pencil-alt"></i> Cambiar</button>
     </div>
   </form>
    </p>
 </section>
-<h6 class="mi cuenta datos personales"> Mi cuenta > datos personales</h6>
-<h1 class="datos personales"> Datos personales</h1>
+<h6 class="mi cuenta datos personales" id="mi-cuenta-datos"> Mi cuenta > datos personales</h6>
+<h1 class="datos personales" id="datos-per"> Datos personales</h1>
 
 <section class="parte2">
+   <form action="#" method="post" class="formulario"></form>
    
-  
-       <form action="#" method="post" class="formulario">
-
       <div class="form-group" id="caja-nombre">
         <label for="nombre">Nombre</label><br>
         <input type="text" id="nombre" name="nombre" required>
@@ -68,7 +66,7 @@
       </div>
       <div class="form-group" id="caja-email-sec">
         <label for="email">Email secundario</label><br>
-        <input type="email" id="email" name="email">
+        <input type="email" id="email-sec" name="email">
       </div>
     </div>
   </form>
@@ -77,7 +75,7 @@
 <br>
 <br>
 <form>
-   <button type="submit" class="btn">GUARDAR CAMBIOS</button>
+   <button type="submit" class="btn" id="boton-guardar-cambios-final">GUARDAR CAMBIOS</button>
 </form>
 </body>
 </html>
