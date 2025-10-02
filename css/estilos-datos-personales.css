@@ -1,1 +1,88 @@
 ﻿/* estilos-datos-personales.css */
+
+body{
+   width: fit-content;
+   padding-left: 150px;
+   background-color: ;
+}
+
+#mi-cuenta-datos{
+    width: fit-content;
+}
+#email{
+    width: fit-content;
+}
+#mi-cuenta-mi-usuario{
+    width: fit-content;
+}
+#item-mi-usuario{
+    width: fit-content;
+}
+#contra{
+    width: fit-content;
+}
+#datos-per{
+    max-width: fit-content;
+}
+.parte1{
+   margin-bottom: 50px;
+    border-color: black;
+    border-width: 10px;
+}
+.parte2{
+    display: grid;
+   grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "nombre apellido ."
+                        "tipo numero fecha"
+                         "tel email-sec .";
+    gap: 8px;
+    row-gap: 10px;
+    max-width: 600px;
+
+}
+#caja-nombre{
+    grid-area: nombre;
+
+}
+#caja-apellido{
+    grid-area: apellido;
+}
+#caja-tipo{
+    grid-area: tipo;
+}
+#caja-num{
+    grid-area: numero;
+}
+#caja-f-nac{
+grid-area: fecha;
+}
+#caja-tel{
+    grid-area: tel;
+}
+#caja-email-sec{
+    grid-area: email-sec;
+}
+#nombre{
+    padding-right: 30px;
+}
+#apellido{
+    padding-right: 30px;
+}
+#tipo{
+    padding-right: 30px;
+}
+#documento{
+    padding-right: 30px;
+}
+#fecha{
+    padding-right: 30px;
+}
+#telefono{
+    padding-right: 30px;
+}
+#email-sec{
+    padding-right: 30px;
+}
+.parte1{
+
+}
