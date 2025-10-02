@@ -102,3 +102,25 @@ p{
 .circulo-carrousel{
    padding: 3px;
 }
+
+#footer-principal{
+   background-color:var( --dark-color-acento-1);
+   color: var(--dark-color-texto);
+   font-size: small;
+   display: flex;
+   flex-direction: row;
+   row-gap: 20px;
+   
+}
+#footer-principal-izquierda{
+   width: 33%;
+   text-align: left;
+}
+#footer-principal-centro{
+   width: 33%;
+   text-align: center;
+}
+#footer-principal-derecha{
+   width: 33%;
+   text-align: right;
+}
