@@ -12,15 +12,20 @@
    <section>
    <h1 class=" mi-usuario">Mi usuario</h1>
    <p class="caja-email-principal">
-      Email principal
-      <div class="cuadro de texto email">cuadro de texto con el mail</div>
+      <div class="cuadro de texto email"><form action="#" method="post">
+    <label for="email">Email principal</label><br>
+    <input type="email" id="email" name="email" placeholder="@gmail.com" required><br><br>
+    
+    <button type="submit">Guardar cambios</button></div>
       <br>
-      <p class="boton guardar cambios">boton guardar cambios</p> 
-   </p>
    <p class="contraseña">
       contraseña 
-      <div class="cuadro de texto contraseña">cuadro de texto con contraseña</div>
-         <article class="boton cambiar">boton "cambiar"</article>
+       <form action="#" method="post">
+    <div class="form-container">
+      <input type="password" id="password" name="password" placeholder="" required>
+      <button type="submit"><i class="fa fa-pencil-alt"></i> Cambiar</button>
+    </div>
+  </form>
    </p>
 </section>
 
@@ -28,45 +33,47 @@
    <h6 class="mi cuenta datos personales"> Mi cuenta > datos personales</h6>
    <div>
       <h1 class="datos personales"> Datos personales</h1>
-      <p class="nombre">
-         nombre
-         <br>
+       <form action="#" method="post" class="formulario">
+    
+    <div class="form-row">
+      <div class="form-group">
+        <label for="nombre">Nombre</label><br>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="apellido">Apellido</label><br>
+        <input type="text" id="apellido" name="apellido" required>
+      </div>
+    </div>
 
-      <article class="caja de texto llenar nombre">caja de texto pára llenar nombre</article> 
-      </p>
-      
-   </div>
-   <div>
-      <p class="apellido"> apellido
-         <br>
-         <article class="caja de apellido"> caja de  texto de apellido
-      </p>
-   </div>
-   <p class="tipo documento"> tipo 
-      <br>
-      <article class="caja tipo documento"> caja de tipo de documento</article>
-   </p>
-   <p class="num documento">
-      numero de documento<br>
-      <article class="caja num documento"> caja de numero de documento</article>
-   </p>
-   <p class="fecha de nacimiento" > fecha de nacimiento</p>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="tipo">Tipo</label><br>
+        <input type="text" id="tipo" name="tipo">
+      </div>
+      <div class="form-group">
+        <label for="documento">Número de documento</label><br>
+        <input type="text" id="documento" name="documento" required>
+      </div>
+      <div class="form-group">
+        <label for="fecha">Fecha de nacimiento</label><br>
+        <input type="date" id="fecha" name="fecha">
+      </div>
+    </div>
 
-   <div>
-      <p class="telefono"> telefono celular <br>
-         <p class="caja telefono"> caja de telefono</p>
-     </p>
-         <p class="email secundario">
-            email secundario <br>
-            <p class="caja email secundario"> caja de email secundario</p>
-           
-         </p>
-         
-   </div>
-
-   <p class="boton guardar cambios">
-      boton guardar cambios
-   </p>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="telefono">Teléfono celular</label><br>
+        <input type="tel" id="telefono" name="telefono">
+      </div>
+      <div class="form-group">
+        <label for="email">Email secundario</label><br>
+        <input type="email" id="email" name="email">
+      </div>
+    </div>
+    <br>
+    <button type="submit" class="btn">GUARDAR CAMBIOS</button>
+  </form>
 
 </section>
 </body>
