@@ -3,7 +3,7 @@
 body{
    width: fit-content;
    padding-left: 150px;
-   background-color: ;
+  
 }
 
 #mi-cuenta-datos{
@@ -82,7 +82,4 @@ grid-area: fecha;
 }
 #email-sec{
     padding-right: 30px;
-}
-.parte1{
-
 }
