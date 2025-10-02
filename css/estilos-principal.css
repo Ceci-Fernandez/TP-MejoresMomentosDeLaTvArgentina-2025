@@ -10,7 +10,8 @@ h1, h2, h3, h4 , .item-valor-nombre{
 }
 p{
   font-family: 'Molengo', sans-serif;
-  font-size: 1rem;
+  font-weight: 200;
+  font-size: 1.2rem;
 }
 
 #navegacion-categoria {
@@ -23,7 +24,7 @@ p{
 }
 
 .articulo-categoria {
-  border: solid 3px gray;
+  border: solid 3px var(--dark-color-acento-3);
   background:  #b0b0b0;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -33,6 +34,48 @@ p{
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.container-categoria{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.articulo-categoria:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.header-articulo {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  
+}
+.detalle-articulo{
+  flex: 1;
+  padding: 1em;
+  background-color: var(--dark-color-acento-3);
+}
+.detalle-articulo h4{
+font-size: 1.2em;
+color: var(--dark-color-acento-1);
+}
+.item-valor-nombre{
+  font-size: 1.4em;
+   font-weight: bolder;
+}
+.item-valor-autor{
+  color:var(--light-color-texto)
+}
+
+.header-articulo img {
+  max-width: 100%;
+  height:10em;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
 #footer-principal {
    background-color: blue;
