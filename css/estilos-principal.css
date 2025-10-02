@@ -23,7 +23,7 @@
    height:100px;
 }
 .logo{
-   width: 6em;
+   width: 11em;
    height: 5em;
 }
 
@@ -59,4 +59,25 @@
 
 .iconos-header{
    padding: 0.5em;
+}
+
+.img-carrousel{
+   width: 90%;
+   height: 50vh;
+}
+
+.contenido-carrousel{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.botones-carrousel{
+   margin: 1em 0em;
+   display: flex;
+   justify-content: center;
+}
+
+.circulo-carrousel{
+   padding: 3px;
 }
