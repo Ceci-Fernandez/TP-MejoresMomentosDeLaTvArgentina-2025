@@ -3,9 +3,52 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title></title>
+   <title>Registrarse</title>
 </head>
+
+<link rel="stylesheet" href="/css/temas-colores-fuentes.css">
+<link rel="stylesheet" href="/css/estilos-registrarse.css">
+
 <body>
-   <h1>Registro</h1>
+   <div class = "formulario-registro">
+      <h2 class="registro-titulo"><a href="/html/login.html">Accede</a> | Registro</h2>
+      
+      <form class="registro-formulario" id="registro-formulario" action="#" method="post">
+
+         <div class="nombreUsuario">
+            <label for="nombre">Nombre de usuario</label>
+            <input type="text" id="usuario" name="usuario" placeholder="Ingrese su nombre" required>
+         </div>
+
+         <div class="email">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Ingrese su email" required>
+         </div>
+
+         <div class="contrasenia">
+            <label for="contrasenia">Contraseña</label>
+            <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingrese su contraseña" required>
+         </div>
+
+         <div class="confirmacionContrasenia">
+            <label for="confirmacion">Confirmacion de contraseña</label>
+            <input type="password" name="confirmacionContrasenia" id="confirmacionContrasenia" placeholder="Ingrese nuevamente su contraseña" required>
+         </div>
+
+         <div class="tieneCuenta"> ¿Ya tenés una cuenta? <a href="login.html">Iniciar sesión</a>
+         </div>
+         <div class="terminos">
+            <input type="checkbox" id="terminos" required>
+            <label for="terminos"> 
+               Acepto los <a href="#">Términos de Servicio</a> y la <a href="#">Política de Privacidad</a>
+            </label>
+         </div>
+
+         <button type="submit" class="btn">Registrarse</button>
+
+         </form>
+
+   </div>
+
 </body>
 </html>
