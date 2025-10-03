@@ -3,9 +3,95 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title></title>
+   <title>Iniciar sesión</title>
+
+   <link rel="stylesheet" href="/css/temas-colores-fuentes.css">
+   <link rel="stylesheet" href="/css/estilos-login.css">
+   <link rel="stylesheet" href="/css/estilos-header-footer.css">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
 </head>
 <body>
-   
+   <header id="encabezado-principal" class="encabezado-principal">
+      <section id="section-encabezado-principal" class="section-encabezado-principal">
+         <div>
+            <img class="logo" src="/assets/img/logo3.png" alt="img de logo">
+         </div>
+         <div id="buscador-header" class="caja-buscador-header">
+             <span class="icono-lupa"><i class="fa-solid fa-magnifying-glass" style="color: #145222;"></i></span>
+             <input type="text" id="buscador" placeholder="" class="buscador-header">
+         </div>
+         <div id="seccion de iconos header" class="seccion-iconos-header">
+            <a class="iconos-header" href=""><i class="fa-solid fa-user" style="color: #145222;"></i></a>
+            <a class="iconos-header" href=""><i class="fa-solid fa-heart" style="color: #145222;"></i></a>
+            <a class="iconos-header" href=""><i class="fa-solid fa-moon" style="color: #145222;"></i></a>
+         </div>
+      </section>
+   </header>
+
+   <div class="formulario-login">
+      <h2 class="login-titulo">Login | <a href="/html/registrarse.html">Registrarse</a></h2>
+      
+      <form class="login-formulario" id="login-formulario" action="/index.html" method="get">
+
+         <div class="usuario">
+            <label for="usuario">Nombre de usuario</label>
+            <input type="text" id="usuario" name="usuario" placeholder="Ingrese su nombre" required>
+         </div>
+
+         <div class="contrasenia">
+            <label for="contrasenia">Contraseña</label>
+            <input type="password" id="contrasenia" name="contrasenia" placeholder="Ingrese su contraseña" required>
+         </div>
+
+         <div class="recordarme">
+            <input type="checkbox" id="recordarme" name="recordarme">
+            <label for="recordarme">Recordarme</label>
+         </div>
+
+         <div class="olvide-contrasenia">
+            <a href="/html/recuperar-password.html">¿Olvidaste tu contraseña?</a>
+         </div>
+
+         <button type="submit" class="btn">Iniciar sesión</button>
+
+      </form>
+   </div>
+
+   <footer id="footer-principal" class="footer-principal">
+      <div id="footer-principal-derecha" class="columna-footer">
+         <h4>Equipo</h4> 
+         <ul>
+            <li>Ariana</li>
+            <li>Cecilia</li>
+            <li>Melina</li>
+            <li>Tomas</li>
+         </ul>
+      </div>
+      <div id="footer-principal-izquierda"  class="columna-footer">
+         <h4>Categorias</h4>
+            <ul>
+            <li><a href="#">Noticiero</a></li>
+            <li><a href="#">Peliculas/series</a></li>
+            <li><a href="#">Deportes</a></li>
+            <li><a href="#">Farándula/programa</a></li>
+            <li><a href="#">Política</a></li>
+         </ul>
+
+         
+      </div>
+     
+      
+       <div id="footer-principal-centro" class="columna-footer">
+         <h4>Seguinos en redes sociales</h4>
+         <div class="logos_redes">
+         <a href="#"><img src="/assets/logos-redes/facebook (1).png" alt="facebook_logo"></a>
+         <a href="#"><img src="/assets/logos-redes/youtube.png" alt="youtube.logo"></a>
+         <a href="#"><img src="/assets/logos-redes/instagram (1).png" alt="instagram_logo"></a>
+      </div>
+      </div>
+      <p>&copy; 2025 Momentos de la TV Argentina. UNLaM.Todos los derechos reservados.</p>
+
+   </footer>
 </body>
 </html>

@@ -1,1 +1,101 @@
 ﻿/* estilos-login.css */
+
+@import url("temas-colores-fuentes.css"); 
+
+body {
+  background-color: var(--light-color-fondo);
+}
+
+.formulario-login {
+    max-width: 15em;
+    margin: 6em auto;
+    padding: 2rem;
+    background-color: var(--light-color-texto);
+    color: var(--light-color-acento-2);
+    border-radius: 8px;
+    font-family: 'Muli', sans-serif;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.login-formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-titulo {
+     margin-bottom: 1rem;
+     font-size: 1.3rem;
+     font-family: 'Quattrocento Sans', serif;
+     text-align: center;
+     
+}
+
+.login-titulo a{
+    text-decoration: none;
+    color: #0f3e1b;
+}
+
+.login-titulo a:hover {
+    text-decoration: underline;
+}
+
+.formulario-login label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;   
+}
+
+.formulario-login input{
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    border: .5px solid var(--light-color-acento-1);
+    background-color: var(--light-color-fondo);
+    color: var(--light-color-acento-2);
+}
+
+.formulario-login input::placeholder {
+  color: #aaa;
+}
+
+.recordarme {
+    display: flex;
+    font-size: 0.9rem;
+    justify-content: center;
+}
+
+.recordarme input {
+    margin-right: 0.5rem;
+    width: auto;
+}
+
+.olvide-contrasenia {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.olvide-contrasenia a {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--light-color-acento-3);
+}
+
+.olvide-contrasenia a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--light-color-acento-3);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0f3e1b;
+}

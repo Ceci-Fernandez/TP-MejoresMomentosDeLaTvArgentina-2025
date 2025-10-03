@@ -2,20 +2,9 @@
 @import url("temas-colores-fuentes.css");
 
 body{
-    background-color: var(--light-color-fondo);
+   width: fit-content;
    padding-left: 150px;
-    
-}
-.container-datos{
-    max-width: 80em;
-    margin: 6em auto;
-    margin-right: 6em;
-    padding: 1rem;
-    background-color: var(--light-color-texto);
-    color: var(--light-color-acento-2);
-    border-radius: 10px;
-    font-family: 'Muli', sans-serif;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  
 }
 
 #mi-cuenta-datos{
