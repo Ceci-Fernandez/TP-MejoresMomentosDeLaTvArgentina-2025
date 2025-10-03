@@ -38,8 +38,7 @@ a{
   transition: 0.3s;
   font-size: 18px;
   font-weight: 600;
-  background-color: #00c46c; /* Activo */
-     
+  background-color: #00c46c;     
 }
 
 .tab-categoria{
@@ -187,20 +186,16 @@ color: var(--dark-color-acento-1);
    padding: 3px;
 }
 
-/* --- RESPONSIVE --- */
 @media (min-width: 600px) {
   #navegacion-categoria {
-    flex-direction: column; /* en columna en pantallas chicas */
+    flex-direction: column;
     align-items: center;
   }
 
   .tab-categoria {
-    /*width: 40%; /* que ocupe todo el ancho */
     text-align: center;
   }
   }
-
-
 
 .footer-principal{
    display: flex;
