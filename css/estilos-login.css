@@ -3,15 +3,11 @@
 @import url("temas-colores-fuentes.css"); 
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   background-color: var(--light-color-fondo);
 }
 
 .formulario-login {
-    max-width: 28em;
+    max-width: 15em;
     margin: 6em auto;
     padding: 2rem;
     background-color: var(--light-color-texto);
@@ -19,6 +15,12 @@ body {
     border-radius: 8px;
     font-family: 'Muli', sans-serif;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.login-formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .login-titulo {
@@ -38,13 +40,13 @@ body {
     text-decoration: underline;
 }
 
-label {
+.formulario-login label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;   
 }
 
-input {
+.formulario-login input{
     padding: 0.5rem;
     margin-bottom: 1rem;
     border-radius: 4px;
@@ -53,13 +55,14 @@ input {
     color: var(--light-color-acento-2);
 }
 
-input::placeholder {
+.formulario-login input::placeholder {
   color: #aaa;
 }
 
 .recordarme {
     display: flex;
     font-size: 0.9rem;
+    justify-content: center;
 }
 
 .recordarme input {
