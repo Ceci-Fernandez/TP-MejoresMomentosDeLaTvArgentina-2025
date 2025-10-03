@@ -1,7 +1,7 @@
 ﻿/* estilos-datos-personales.css */
 
 body{
-   width: fit-content;
+
    padding-left: 150px;
   
 }
@@ -30,37 +30,31 @@ body{
     border-width: 10px;
 }
 .parte2{
-    display: grid;
-   grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "nombre apellido ."
-                        "tipo numero fecha"
-                         "tel email-sec .";
-    gap: 8px;
-    row-gap: 10px;
-    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
 
 }
 #caja-nombre{
-    grid-area: nombre;
+    margin: 15px;
 
 }
 #caja-apellido{
-    grid-area: apellido;
+    margin: 15px;
 }
 #caja-tipo{
-    grid-area: tipo;
+   margin: 15px;
 }
 #caja-num{
-    grid-area: numero;
+   margin: 15px;
 }
 #caja-f-nac{
-grid-area: fecha;
+margin: 15px;
 }
 #caja-tel{
-    grid-area: tel;
+    margin: 15px;
 }
 #caja-email-sec{
-    grid-area: email-sec;
+   margin: 15px;
 }
 #nombre{
     padding-right: 30px;
