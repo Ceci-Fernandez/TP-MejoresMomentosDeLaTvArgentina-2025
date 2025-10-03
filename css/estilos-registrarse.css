@@ -121,6 +121,9 @@ input[type="checkbox"]{
    margin-bottom: 0;
     font-size:12px;
 }
+.tieneCuenta a, .contenedor-checkbox a{
+color: var(--light-color-acento-2);
+}
 
 footer {
     
