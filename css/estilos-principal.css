@@ -13,6 +13,11 @@ p{
   font-weight: 200;
   font-size: 1.2rem;
 }
+a{
+   text-decoration: none;
+   color: var(--light-color-texto);
+
+}
 
 #navegacion-categoria {
    background-color: var(--light-color-fondo);
@@ -33,8 +38,7 @@ p{
   transition: 0.3s;
   font-size: 18px;
   font-weight: 600;
-  background-color: #00c46c; /* Activo */
-     
+  background-color: #00c46c;     
 }
 
 .tab-categoria{
@@ -118,11 +122,6 @@ color: var(--dark-color-acento-1);
   cursor: pointer;
 }
 
-#footer-principal {
-   background-color: blue;
-   color: white;
-}
-
 #qr-code {
    width:100px;
    height:100px;
@@ -187,15 +186,48 @@ color: var(--dark-color-acento-1);
    padding: 3px;
 }
 
-/* --- RESPONSIVE --- */
 @media (min-width: 600px) {
   #navegacion-categoria {
-    flex-direction: column; /* en columna en pantallas chicas */
+    flex-direction: column;
     align-items: center;
   }
 
   .tab-categoria {
-    /*width: 40%; /* que ocupe todo el ancho */
     text-align: center;
   }
   }
+
+.footer-principal{
+   display: flex;
+   justify-content: space-evenly;
+   background-color: var(--dark-color-acento-3);
+   color: var(--light-color-texto);
+   padding: 2em;
+}
+.columna-footer{
+display: flex;
+flex-direction: column;
+
+}
+.logos_redes{
+   display: flex;
+   gap: 1em;
+}
+.logos_redes img{
+   width: 2em;
+}
+.columna-footer ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2em;
+  line-height: 1.5em;
+
+}
+.columna-footer h4{
+   font-size: 1.3em;
+}
+a:hover{
+   color: var(--dark-color-acento-2);
+
+}
