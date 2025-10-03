@@ -1,29 +1,66 @@
 ﻿/* estilos-registrarse.css */
 
 @import url("temas-colores-fuentes.css"); 
+main{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  
+}
 
 body {
-  
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: var(--light-color-fondo);
+  margin: 0;
+  padding-top: 60px;
 }
+
 .formulario-registro{
-    max-width: 30em;
-    margin: 6em auto;
+    max-width: 25em;
+    width: 960%;
+    margin: auto;
     padding: 2rem;
     background-color: var(--light-color-texto);
     color: var(--light-color-acento-2);
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: 'Muli', sans-serif;
+    text-align: left;
 }
 
 .registro-titulo{
      margin-bottom: 1rem;
      font-size: 1.2rem;
      font-family: 'Quattrocento Sans', serif;
+     font-weight: bold;
+     padding-bottom: 1rem;
+     border-bottom: 1px solid #eee;
+}
+
+.registro-titulo a{
+  color:var(--dark-color-acento-1);
+  text-decoration: none;
+}
+
+.registro-titulo a:hover{
+  color: var(--dark-color-acento-3);
+}
+
+.acceso-link{
+  display: block;
+    font-size: 1rem;
+    color: var(--light-color-acento-2);
 }
 
 label{
@@ -44,4 +81,51 @@ input{
 
 input::placeholder {
   color: #aaa;
+}
+
+input [type="checkbox"]{
+  width: 18px;
+  height: 18px;
+  margin-right: 0.5rem;
+}
+
+.btn-registrar{
+  padding: 0.75rem;
+  background-color: var(--dark-color-acento-2); 
+  border-radius: 4px;
+  color: var(--light-color-texto);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.btn-registrar:hover {
+  background-color: var(--light-color-acento-3);
+}
+
+.contenedor-checkbox{
+   display: flex;
+   align-items: center;
+   gap: 5px;
+   margin-bottom: 1rem;
+}
+
+input[type="checkbox"]{
+    width: 16px;
+    height: 16px;
+    margin: 0;
+}
+
+.contenedor-checkbox label {
+   margin-bottom: 0;
+    font-size:12px;
+}
+
+footer {
+    
+    bottom: 0;     
+    left: 0;
+    width: 100%;
+    z-index: 100;
 }

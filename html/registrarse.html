@@ -4,12 +4,38 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Registrarse</title>
+
+   <link rel="stylesheet" href="/css/temas-colores-fuentes.css">
+   <link rel="stylesheet" href="/css/estilos-registrarse.css">
+   <link rel="stylesheet" href="/css/estilos-principal.css">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 </head>
 
-<link rel="stylesheet" href="/css/temas-colores-fuentes.css">
-<link rel="stylesheet" href="/css/estilos-registrarse.css">
-
 <body>
+   <header id="encabezado-principal" class="encabezado-principal">
+      <section id="section-encabezado-principal" class="section-encabezado-principal">
+
+         <div>
+            <img class="logo" src="/assets/img/logo3.png" alt="img de logo">
+         </div>
+
+         <div id="buscador-header" class="caja-buscador-header">
+             <span class="icono-lupa"><i class="fa-solid fa-magnifying-glass" style="color: #145222;"></i></span>
+             <input type="text" id="buscador" placeholder="" class="buscador-header">
+         </div>
+
+         <div id="seccion-de-iconos-header" class="seccion-iconos-header">
+            <a class="iconos-header" href=""><i class="fa-solid fa-user" style="color: #145222;"></i></a>
+            <a class="iconos-header" href=""><i class="fa-solid fa-heart" style="color: #145222;"></i></a>
+            <a class="iconos-header" href=""><i class="fa-solid fa-moon" style="color: #145222;"></i></a>
+         </div>
+      </section>
+   </header>
+
+   <main>
+
+      <section id="seccion-filtros"></section>
+
    <div class = "formulario-registro">
       <h2 class="registro-titulo"><a href="/html/login.html">Accede</a> | Registro</h2>
       
@@ -37,18 +63,24 @@
 
          <div class="tieneCuenta"> ¿Ya tenés una cuenta? <a href="login.html">Iniciar sesión</a>
          </div>
-         <div class="terminos">
-            <input type="checkbox" id="terminos" required>
-            <label for="terminos"> 
-               Acepto los <a href="#">Términos de Servicio</a> y la <a href="#">Política de Privacidad</a>
-            </label>
+
+         <div class="contenedor-checkbox">
+            <input type="checkbox" id="acepto-condiciones" required>
+            <label for="acepto-condiciones">Acepto los <a href="#">Términos de Servicio</a> y la <a href="#">Política de Privacidad</a></label>
          </div>
 
-         <button type="submit" class="btn">Registrarse</button>
+         <button class="btn-registrar" id="btn-registrar" type="submit">Registrarse</button>
+         
 
          </form>
 
    </div>
+</main>
+ <footer id="footer-principal">
+        <div id="footer-principal-izquierda">FOOTER PRINCIPAL (IZQUIERDA)</div>
+        <div id="footer-principal-centro">FOOTER PRINCIPAL (CENTRO)</div>
+        <div id="footer-principal-derecha">FOOTER PRINCIPAL (DERECHA)</div>
+</footer>
 
 </body>
 </html>
