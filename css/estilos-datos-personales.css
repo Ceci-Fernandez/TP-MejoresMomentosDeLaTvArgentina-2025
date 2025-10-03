@@ -1,10 +1,10 @@
 ﻿/* estilos-datos-personales.css */
 
 body{
-   width: fit-content;
-   padding-left: 150px;
+   width: 100%;
   
 }
+
 
 #mi-cuenta-datos{
     width: fit-content;
@@ -82,4 +82,15 @@ grid-area: fecha;
 }
 #email-sec{
     padding-right: 30px;
+}
+.btn{
+ 
+  padding: 0.75rem;
+  background-color: var(--dark-color-acento-2); 
+  border-radius: 4px;
+  color: var(--light-color-texto);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
 }
