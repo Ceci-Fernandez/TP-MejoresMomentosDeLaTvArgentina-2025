@@ -148,7 +148,7 @@ color: var(--dark-color-acento-1);
 /* footer*/
 .footer-principal{
    display: flex;
-   justify-content: space-evenly;
+   justify-content: space-around;
    background-color: var(--dark-color-acento-3);
    color: var(--light-color-texto);
    padding: 2em;
@@ -179,4 +179,21 @@ flex-direction: column;
 a:hover{
    color: var(--dark-color-acento-2);
 
+}
+@media (max-width: 768px) {
+  .footer-principal {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5em; 
+  }
+
+  .columna-footer {
+    width: 100%;
+    align-items: center;
+  }
+
+  .logos_redes {
+    justify-content: center;
+  }
 }
