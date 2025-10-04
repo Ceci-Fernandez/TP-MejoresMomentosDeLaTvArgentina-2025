@@ -112,3 +112,38 @@ body{
   border-radius: 10px;
   padding-bottom: 27px;
 }
+.footer-principal{
+   display: flex;
+   justify-content: space-evenly;
+   background-color: var(--dark-color-acento-3);
+   color: var(--light-color-texto);
+   padding: 2em;
+}
+.columna-footer{
+display: flex;
+flex-direction: column;
+
+}
+.logos_redes{
+   display: flex;
+   gap: 1em;
+}
+.logos_redes img{
+   width: 2em;
+}
+.columna-footer ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2em;
+  line-height: 1.5em;
+
+}
+.columna-footer h4{
+   font-size: 1.3em;
+}
+
+.footer-principal a:hover{
+   color: var(--dark-color-acento-2);
+
+}
