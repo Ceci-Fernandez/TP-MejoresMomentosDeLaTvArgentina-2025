@@ -1,149 +1,112 @@
 ﻿/* estilos-datos-personales.css */
-@import url("temas-colores-fuentes.css");
-
-body{
-   width: fit-content;
-   padding-left: 150px;
-  
+.nav a{
+    display: flex;
+    justify-content:flex-start;
+    padding: 1em 1em 1em .3em;
+    gap: 1em;
+    background-color: var(--dark-color-acento-2);
+    max-width: 100%;
+    color:var(--light-color-texto);
 }
-
-#mi-cuenta-datos{
+.nav span{
+    font-size: 1.5em;
+}
+.container-datos{
     
-    width: fit-content;
-}
-#email{
-    width: fit-content;
-}
-#mi-cuenta-mi-usuario{
-    width: fit-content;
-    font-size: 1.5rem;
-    margin-top: -0.5px;
-}
-#item-mi-usuario{
-    width: fit-content;
-}
-#contra{
-    width: fit-content;
-}
-#datos-per{
-    max-width: fit-content;
-}
-.parte1{
-   font-size: 1.5rem;
-    margin-bottom: 50px;
-    border-color: black;
-    border-width: 10px;
-}
-#contra{
-    font-size: 1.5rem;
-}
-#boton-cambiar{
-    block-size: 1.5rem;
-    border-radius: 5px;
+    display: flex;
+    margin: 0;
 
-    color: var(--light-color-texto);
-    background-color: var(--light-color-acento-3);
 }
-.form-container input{
-    width: 50%;
-    height: 1.5rem;
-    border-radius: 5px;
-    background-color: var(--light-color-fondo);
-}
-#email{
-    width: 50%;
-    background-color: var(--light-color-fondo);
-}
-#boton-guardar-cambios{
-    block-size: 2rem;
-    border-radius: 5px;
-
-    color: var(--light-color-texto);
-    background-color: var(--light-color-acento-3);
-}
-.form-group input{
+.opcion-menu{
     width: 100%;
-    height: 1.5rem;
-    border-radius: 5px;
-    background-color: var(--light-color-fondo);
-    
 }
-.form-group{
-    
-    margin: 15px;
-   font-size: 1.5rem;
-   align-items: center;
+.asterisco-rojo{
+    color: red;
+}
+ .opcion-menu-content{
+    width: 100%;
+   max-width: 90%;
+   display: flex;
+   flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+}
+.contenedor-favoritos{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+width: 100%;
+gap: 1em;
+}
+.opcion-menu-content input, .opcion-menu-content select{
+    width: 60%;
+    padding: 1em;
+    border-radius: .5em;
 }
 
-#boton-guardar-cambios-final{
-    block-size: 2rem;
+.hide{
+    display: none;
+}
 
+.menu-aside-perfil {
+    height:auto;
+    background-color: var(--dark-color-acento-1);
     color: var(--light-color-texto);
-    background-color: var(--light-color-acento-3);
+    padding: 1em;
+    margin: 0; 
+   text-align: left;
+   width: 20%;
 }
 
-.parte2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-  gap: 20px;
+
+.menu-lista ul{
+    padding: 0;
+    text-align: left;
 }
-#caja-tipo{
-    padding-top: 30px;
+.menu-lista h1{
+font-size: 2em;
+font-weight: 200;
+}
+.menu-lista li{
+    padding: .5em;
+    border: .3 solid rgb(33, 31, 31);
+    margin: 0 0 .5em;
+    list-style: none;
+    text-align: left;
+    border-radius: .2em;
+}
+.menu-lista #mi-usuario{
+    
+    background-color: var(--dark-color-acento-2);
 }
 
-/* Fila 1 → 2 campos */
-#caja-nombre { grid-column: 1 / 2; }
-#caja-apellido { grid-column: 2 / 3; }
 
-/* Fila 2 → 3 campos normales */
-#caja-tipo {   grid-column: 1 / 2; }
-#caja-num { grid-column: 2 / 3; }
-#caja-f-nac { grid-column: 3 / 4; }
-
-/* Fila 3 → 2 campos */
-#caja-tel { grid-column: 1 / 2; }
-#caja-email-sec { grid-column: 2 / 3; }
-
-/* Botón → ocupa todo el ancho */
-#boton-guardar-cambios-final {
-  grid-column: 1 / -1;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 10px;
-  padding-bottom: 27px;
-}
-.footer-principal{
-   display: flex;
-   justify-content: space-evenly;
-   background-color: var(--dark-color-acento-3);
-   color: var(--light-color-texto);
-   padding: 2em;
-}
-.columna-footer{
-display: flex;
-flex-direction: column;
-
-}
-.logos_redes{
-   display: flex;
-   gap: 1em;
-}
-.logos_redes img{
-   width: 2em;
-}
-.columna-footer ul{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 1.2em;
-  line-height: 1.5em;
-
-}
-.columna-footer h4{
-   font-size: 1.3em;
+.favorito{
+width: 100%;
+position: relative;
 }
 
-.footer-principal a:hover{
-   color: var(--dark-color-acento-2);
+.favorito svg{
+    position: absolute;
+    top: 0;
+    right: 1;
+}
 
+.favorito img{
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 0.5em;
+}
+
+.btn{
+  width: 20%; 
+  padding: 0.75rem;
+  background-color: var(--dark-color-acento-2); 
+  border-radius: 4px;
+  color: var(--light-color-texto);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
 }
