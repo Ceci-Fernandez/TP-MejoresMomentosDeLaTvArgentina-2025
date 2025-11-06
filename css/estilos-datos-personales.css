@@ -12,14 +12,14 @@
     font-size: 1.5em;
 }
 .container-datos{
-    
     display: flex;
     margin: 0;
-
 }
+
 .opcion-menu{
     width: 100%;
 }
+
 .asterisco-rojo{
     color: red;
 }

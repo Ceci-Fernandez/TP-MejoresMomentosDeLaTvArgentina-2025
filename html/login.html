@@ -23,17 +23,18 @@
    <div class="formulario-login">
       <h2 class="login-titulo">Login | <a href="/html/registrarse.html">Registrarse</a></h2>
       
-      <form class="login-formulario" id="login-formulario" action="/index.html" method="get">
+      <form class="login-formulario" id="login-formulario" method="get">
 
          <div class="usuario">
             <label for="usuario">Nombre de usuario</label>
-            <input type="text" id="usuario" name="usuario" placeholder="Ingrese su nombre" required>
+            <input type="text" id="usuario" name="usuario" placeholder="Ingrese su nombre">
          </div>
-
+          <p id="error-usuario" class="mensaje-error"></p>
          <div class="contrasenia">
             <label for="contrasenia">Contraseña</label>
-            <input type="password" id="contrasenia" name="contrasenia" placeholder="Ingrese su contraseña" required>
+            <input type="password" id="contrasenia" name="contrasenia" placeholder="Ingrese su contraseña" >
          </div>
+          <p id="error-contrasenia" class="mensaje-error"></p>
 
          <div class="recordarme">
             <input type="checkbox" id="recordarme" name="recordarme">
@@ -44,7 +45,7 @@
             <a href="/html/recuperar-password.html">¿Olvidaste tu contraseña?</a>
          </div>
 
-         <button type="submit" class="btn">Iniciar sesión</button>
+         <button type="submit" id="btn-inicio-sesion" class="btn" disabled >Iniciar sesión</button>
 
       </form>
    </div>
@@ -83,5 +84,6 @@
       <p class="copyright">&copy; 2025 Momentos de la TV Argentina. UNLaM.Todos los derechos reservados.</p>
 
    </footer>
+   <script type="module" src="/js/login.js"></script>
 </body>
 </html>

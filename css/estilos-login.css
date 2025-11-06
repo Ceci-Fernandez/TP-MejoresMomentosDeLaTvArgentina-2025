@@ -99,3 +99,10 @@ body {
 .btn:hover {
     background-color: #0f3e1b;
 }
+input.input-error{
+    border:2px solid red;
+}
+.mensaje-error{
+    font-size: 1em;
+    color: red;
+}
