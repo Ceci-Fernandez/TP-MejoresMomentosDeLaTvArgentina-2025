@@ -119,28 +119,30 @@ function validarInicioSesion() {
             errorContrasenia.textContent = "";
             contrasenia.classList.remove("input-error");
         }
+
+        const todoCorrecto = usuarioNoEstaVacio && contraseniaNoEstaVacio
+            && emailValido && contraseniaValida;
+        if (todoCorrecto) {
+            window.location.href = "/html/datos-personales.html";
+        }
     })
 
-    const todoCorrecto = usuarioNoEstaVacio && contraseniaNoEstaVacio
-   && emailValido && contraseniaValida;
-  if (todoCorrecto) {
-    window.location.href = "/html/datos-personales.html"; 
-  }
+
 }
 usuario.addEventListener("input", validarInicioSesion)
 contrasenia.addEventListener("input", validarInicioSesion)
 
 usuario.addEventListener("focus", () => {
-  errorUsuario.textContent = "";
-  usuario.classList.remove("input-error");
+    errorUsuario.textContent = "";
+    usuario.classList.remove("input-error");
 });
 
 contrasenia.addEventListener("focus", () => {
-  errorContrasenia.textContent = "";
-  contrasenia.classList.remove("input-error");
+    errorContrasenia.textContent = "";
+    contrasenia.classList.remove("input-error");
 });
 
-  
+
 
 
 
