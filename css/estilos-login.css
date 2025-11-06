@@ -99,3 +99,17 @@ body {
 .btn:hover {
     background-color: #0f3e1b;
 }
+
+@media screen and (max-width: 768px) {
+    .logo{
+    width: 8em;
+    height: 4em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+    .logo{
+    width: 6em;
+    height: 3em;
+  }
+}
