@@ -63,21 +63,40 @@ contrasenia.addEventListener("input", validarTodo)
 */
 //VALIDACIÓN DE EMAIL:
 // formato válido de mail (un @ en el medio) y que termine con .com, .org o .net 
+//Creamos una funcion para  validar el correo y pasamos por parametro la variable que creamos
+// arriba para guardar el correo. 
 function validarEmailCorrecto(email) {
+    //guardamos dentor de otra variable lo que viene por parametro y
+    //obtenemos su valor con .value y trim() para descartar cualquier espacio en blanco.
+    const emailRegex= /^[\w-.]+ @  ([\w.]+\.)+[\w.]/
     const valor = email.value.trim()
+    // devolvemos la variable con su valor y aplicamos la fun cion includes , para saber si contiene alguno de esos carateres.
     return valor.includes("@") &&
+    // endWith para saber si termina con esos carateres.
         (valor.endsWith(".com") || valor.endsWith(".org") || valor.endsWith(".net"));
 }
 //CONTRASEÑA: longitud de al menos 8 y máxima de 12 caracteres, y que contenga al menos 
-//una mayúscula, una minuscula*
+//una mayúscula, una minuscula un número, y cualquiera de los siguientes caracteres 
+//especiales: # ? ! % $ 
 function validarContrasenia(contrasenia) {
     const valor = contrasenia.value.trim()
+    // guardamos una validacion dentro de una variable. En este caso si el valor es mayor a 8 y menor que 12
     const longitudValida = valor.length >= 8 && valor.length <= 12
+    // este fragmento analiza si el valor pasado por parametro contiene mayusculas
     const contieneMayuscula = /[A-Z]/.test(valor)
+     const contieneNumero=/[0-9]/.test(valor)
+     const contieneCaracteresEspeciales= /[#?!%$]/.test(valor)
+    // este fragmento analiza si el valor pasado por parametro contiene minusculas
     const contieneMinuscula = /[a-z]/.test(valor)
     return longitudValida && contieneMayuscula && contieneMinuscula
+     &&contieneNumero && contieneCaracteresEspeciales
 }
+
+//creamos una funcion que haga todos los pasos anteriores. 
+
+
 function validarInicioSesion() {
+    //1ro. guarda los valores en un avariable y le quita los espacios
     const email = usuario.value.trim()
     const psw = contrasenia.value.trim()
 
@@ -86,7 +105,6 @@ function validarInicioSesion() {
 
     const emailValido = validarEmailCorrecto(usuario)
     const contraseniaValida = validarContrasenia(contrasenia)
-
 
     // validamos que el email no este vacio y tenga el formato que corresponde
 
