@@ -7,24 +7,6 @@ main{
   height: 100vh;
 }
 
-header{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: var(--light-color-fondo);
-  margin: 0;
-  padding-top: 60px;
-}
 
 .formulario-registro{
     max-width: 25em;
@@ -72,7 +54,6 @@ label{
 input{
     width: 100%;
     padding: 0.5rem;
-    margin-bottom: 1rem;
     border-radius: 4px;
     border: .5px solid var(--light-color-acento-1);
     background-color: var(--light-color-fondo);
@@ -111,7 +92,7 @@ input[type="checkbox"]{
    margin-bottom: 1rem;
 }
 
-input[type="checkbox"]{
+ input[type="checkbox"]{
     width: 16px;
     height: 16px;
     margin: 0;
@@ -125,10 +106,3 @@ input[type="checkbox"]{
 color: var(--light-color-acento-2);
 }
 
-footer {
-    
-    bottom: 0;     
-    left: 0;
-    width: 100%;
-    z-index: 100;
-}
