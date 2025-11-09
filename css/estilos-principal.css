@@ -2,7 +2,7 @@
  body {
   font-family: 'Muli', sans-serif;
   color: var(--dark-color-texto); 
-  background-color: var(--light-color-fondo); 
+  background-color: var(--light-color-fondo2); 
   margin: 0;
   width: 100%;
 
@@ -23,7 +23,6 @@ a{
 }
 
 #navegacion-categoria {
-   background-color: var(--light-color-fondo);
    display: flex;
    margin-right: 20px;
    margin-left: 20px;
@@ -212,6 +211,7 @@ color:#F2F3F3;
    width:100px;
    height:100px;
 }
+
 .logo{
    width: 11em;
    height: 5em;
@@ -224,13 +224,11 @@ color:#F2F3F3;
 }
 
 .buscador-header{
-   border-radius: 1em;
+   border-radius: 2em;
    width: 100%;
-   padding: 0.25em 2em;
-   border-color: gray;
-   border-style: solid;
-   background-color: #F2F3F3;
-
+   padding: 0.70em 2.5em;
+   border-style: none;
+  background-color: var(--light-color-acento-1);
 }
 
 .caja-buscador-header{
@@ -243,31 +241,35 @@ color:#F2F3F3;
 
 .icono-lupa{
    position: absolute;
-   left: 8px;
-   bottom: 3px;
+   left: 12px;
+   bottom: 6px;
 }
 
 .boton-acceder{
-    border: 1px solid;
-    padding: 0.60em;
-    border-radius: 2em;
+    padding: 0.70em;
+    border-radius: 2.5em;
     background: #145222;
     margin-right: 2em;
     font-weight: 600;
 }
 
 .img-carrousel{
-   width: 90%;
    height: 50vh;
 }
 
 .contenido-carrousel{
    display: flex;
-   justify-content: space-around;
+   justify-content: center;
    align-items: center;
 }
 
-.botones-carrousel{
+.boton-carrousel{
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: 2em;
+}
+
+.circulo-carrousel-general{
    margin: 1em 0em;
    display: flex;
    justify-content: center;
@@ -280,7 +282,6 @@ color:#F2F3F3;
   .container-columnas-footer{
    display: grid;
    grid-template-columns: repeat(3,1fr);
-
    padding: 2em;
 }
 
