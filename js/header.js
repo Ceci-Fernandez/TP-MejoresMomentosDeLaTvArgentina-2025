@@ -25,7 +25,7 @@ buscador.addEventListener('blur', () => {
 
 //carrousel
 
-const img = [
+const img = [ 
   "assets/img/atiendo-boludos.jpg",
   "assets/img/me-gusta-el-arte.jpeg",
   "assets/img/maniobra-hemlichpng.webp"
@@ -40,21 +40,35 @@ const circulos = document.querySelectorAll(".circulo-carrousel i");
 function mostrarImagen() {
   imgCarrousel.src = img[actual];
 
-  circulos.forEach((c, i) => {
-    c.style.color = (i === actual) ? "#145222" : "#dee2e6";
+  circulos.forEach((circuloActual, i) => {
+    circuloActual.style.color = (i === actual) ? "#145222" : "#dee2e6";
   });
 }
 
-btnDerecha.addEventListener("click", (e) => {
-  e.preventDefault();
+function avanzarAuto() {
   actual = (actual + 1) % img.length;
   mostrarImagen();
+}
+
+let intervalo = setInterval(avanzarAuto, 2000);
+
+function reiniciarIntervalo() {
+  clearInterval(intervalo);
+  intervalo = setInterval(avanzarAuto, 2000);
+}
+
+btnDerecha.addEventListener("click", (eventoFlecha) => {
+  eventoFlecha.preventDefault();
+  actual = (actual + 1) % img.length;
+  mostrarImagen();
+  reiniciarIntervalo();
 });
 
-btnIzquierda.addEventListener("click", (e) => {
-  e.preventDefault();
+btnIzquierda.addEventListener("click", (eventoFlecha) => {
+  eventoFlecha.preventDefault();
   actual = (actual - 1 + img.length) % img.length;
   mostrarImagen();
+  reiniciarIntervalo();
 });
 
 circulos.forEach((c, i) => {
@@ -62,6 +76,7 @@ circulos.forEach((c, i) => {
     e.preventDefault();
     actual = i;
     mostrarImagen();
+    reiniciarIntervalo();
   });
 });
 
