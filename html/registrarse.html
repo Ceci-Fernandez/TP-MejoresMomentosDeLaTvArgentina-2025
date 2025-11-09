@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,16 +20,6 @@
             <img class="logo" src="/assets/img/logo3.png" alt="img de logo">
          </div>
 
-         <div id="buscador-header" class="caja-buscador-header">
-             <span class="icono-lupa"><i class="fa-solid fa-magnifying-glass" style="color: #145222;"></i></span>
-             <input type="text" id="buscador" placeholder="" class="buscador-header">
-         </div>
-
-         <div id="seccion-de-iconos-header" class="seccion-iconos-header">
-            <a class="iconos-header" href=""><i class="fa-solid fa-user" style="color: #145222;"></i></a>
-            <a class="iconos-header" href=""><i class="fa-solid fa-heart" style="color: #145222;"></i></a>
-            <a class="iconos-header" href=""><i class="fa-solid fa-moon" style="color: #145222;"></i></a>
-         </div>
       </section>
    </header>
 
@@ -36,80 +27,92 @@
 
       <section id="seccion-filtros"></section>
 
-   <div class = "formulario-registro">
-      <h2 class="registro-titulo"><a href="/html/login.html">Accede</a> | Registro</h2>
-      
-      <form class="registro-formulario" id="registro-formulario" action="#" method="post">
+      <div class="formulario-registro">
+         <h2 class="registro-titulo"><a href="/html/login.html">Accede</a> | Registro</h2>
 
-         <div class="nombreUsuario">
-            <label for="nombre">Nombre de usuario</label>
-            <input type="text" id="usuario" name="usuario" placeholder="Ingrese su nombre" required>
-         </div>
+         <form class="registro-formulario" id="registro-formulario" action="#" method="post">
 
-         <div class="email">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Ingrese su email" required>
-         </div>
+            <div class="nombreUsuario">
+               <label for="nombre">Nombre de usuario</label>
+               <input type="text" id="usuario" name="usuario" placeholder="Ingrese su nombre" required>
+               <div class="mensaje-error" id="mensaje-error"></div>
 
-         <div class="contrasenia">
-            <label for="contrasenia">Contraseña</label>
-            <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingrese su contraseña" required>
-         </div>
+            </div>
 
-         <div class="confirmacionContrasenia">
-            <label for="confirmacion">Confirmacion de contraseña</label>
-            <input type="password" name="confirmacionContrasenia" id="confirmacionContrasenia" placeholder="Ingrese nuevamente su contraseña" required>
-         </div>
+            <div class="email">
+               <label for="email">Email</label>
+               <input type="email" name="email" id="email" placeholder="Ingrese su email" required>
+               <div class="mensaje-error" id="mensaje-error"></div>
+            </div>
 
-         <div class="tieneCuenta"> ¿Ya tenés una cuenta? <a href="login.html">Iniciar sesión</a>
-         </div>
+            <div class="contrasenia">
+               <label for="contrasenia">Contraseña</label>
+               <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingrese su contraseña" required>
+               <div class="mensaje-error" id="mensaje-error"></div>
 
-         <div class="contenedor-checkbox">
-            <input type="checkbox" id="acepto-condiciones" required>
-            <label for="acepto-condiciones"> <a href="#">Acepto los Términos de Servicio y las Política de Privacidad</a></label>
-         </div>
+            </div>
 
-         <button class="btn-registrar" id="btn-registrar" type="submit">Registrarse</button>
-         
+            <div class="confirmacionContrasenia">
+               <label for="confirmacion">Confirmacion de contraseña</label>
+               <input type="password" name="confirmacionContrasenia" id="confirmacionContrasenia"
+                  placeholder="Ingrese nuevamente su contraseña" required>
+               <div class="mensaje-error" id="mensaje-error"></div>
+
+            </div>
+
+            <div class="tieneCuenta"> ¿Ya tenés una cuenta? <a href="login.html">Iniciar sesión</a>
+            </div>
+
+            <div class="contenedor-checkbox">
+               <input type="checkbox" id="acepto-condiciones" required>
+               <label for="acepto-condiciones"> <a href="#">Acepto los Términos de Servicio y las Política de
+                     Privacidad</a></label>
+            </div>
+
+            <button class="btn-registrar" id="btn-registrar" type="submit">Registrarse</button>
+
 
          </form>
 
-   </div>
-</main>
+      </div>
+   </main>
    <footer id="footer-principal" class="footer-principal">
-      <div id="footer-principal-derecha" class="columna-footer">
-         <h4>Equipo</h4> 
-         <ul>
-            <li>Ariana</li>
-            <li>Cecilia</li>
-            <li>Melina</li>
-            <li>Tomas</li>
-         </ul>
-      </div>
-      <div id="footer-principal-izquierda"  class="columna-footer">
-         <h4>Categorias</h4>
+      <div class="container-columnas-footer">
+         <div id="footer-principal-izquierda" class="columna-footer">
+            <h4>Equipo</h4>
             <ul>
-            <li><a href="#">Noticiero</a></li>
-            <li><a href="#">Peliculas/series</a></li>
-            <li><a href="#">Deportes</a></li>
-            <li><a href="#">Farándula/programa</a></li>
-            <li><a href="#">Política</a></li>
-         </ul>
+               <li>Ariana</li>
+               <li>Cecilia</li>
+               <li>Melina</li>
+               <li>Tomas</li>
+            </ul>
+         </div>
+         <div id="footer-principal-centro" class="columna-footer">
+            <h4>Categorias</h4>
+            <ul>
+               <li><a href="#">Noticiero</a></li>
+               <li><a href="#">Peliculas/series</a></li>
+               <li><a href="#">Deportes</a></li>
+               <li><a href="#">Farándula/programa</a></li>
+               <li><a href="#">Política</a></li>
+            </ul>
+         </div>
 
-         
+         <div id="footer-principal-derecha" class="columna-footer">
+            <h4>Seguinos en redes sociales</h4>
+            <div class="logos_redes">
+               <a href="https://www.facebook.com/UnlamOficial/?locale=es_LA"><img src="/assets/logos-redes/facebook.png"
+                     alt="facebook_logo"></a>
+               <a href="https://www.youtube.com/c/UNLaMOficial"><img src="/assets/logos-redes/youtube (1).png"
+                     alt="youtube.logo"></a>
+               <a href="https://www.instagram.com/unlamoficial/?hl=es"><img src="/assets/logos-redes/instagram (2).png"
+                     alt="instagram_logo"></a>
+            </div>
+         </div>
       </div>
-     
-      
-       <div id="footer-principal-centro" class="columna-footer">
-         <h4>Seguinos en redes sociales</h4>
-         <div class="logos_redes">
-         <a href="#"><img src="/assets/logos-redes/facebook (1).png" alt="facebook_logo"></a>
-         <a href="#"><img src="/assets/logos-redes/youtube.png" alt="youtube.logo"></a>
-         <a href="#"><img src="/assets/logos-redes/instagram (1).png" alt="instagram_logo"></a>
-      </div>
-      </div>
-      <p>&copy; 2025 Momentos de la TV Argentina. UNLaM.Todos los derechos reservados.</p>
+      <p class="copyright">&copy; 2025 Momentos de la TV Argentina. UNLaM.Todos los derechos reservados.</p>
 
    </footer>
 </body>
+
 </html>
