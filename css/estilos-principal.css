@@ -254,7 +254,9 @@ color:#F2F3F3;
 }
 
 .img-carrousel{
-   height: 50vh;
+  height: 50vh;
+  border-radius: 1.5em;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .contenido-carrousel{
