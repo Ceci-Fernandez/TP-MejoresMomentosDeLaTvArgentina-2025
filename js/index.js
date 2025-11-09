@@ -57,6 +57,7 @@ carrousel();
 /*estrellas -ranking*/
 
 const elementosRating = document.querySelectorAll('.item-valor-rating');
+
 function generadorDeEstrellas(rating) {
   rating = parseInt(rating);
   let estrellas = "";
