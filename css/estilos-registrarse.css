@@ -114,14 +114,12 @@ input[type="checkbox"]{
     font-size:12px;
 }
 
-.tieneCuenta a, .contenedor-checkbox a{
+.tieneCuenta a, .contenedor-checkbox a {
 color: var(--light-color-acento-2);
 }
 
-footer {
+.footer-principal {
     display: flex;
-    bottom: 0;     
-    left: 0;
-    width: 100%;
+    flex-direction: column;
     
 }
