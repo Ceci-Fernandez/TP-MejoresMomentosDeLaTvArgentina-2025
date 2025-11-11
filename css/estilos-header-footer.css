@@ -92,8 +92,8 @@ a{
  .container-columnas-footer{
    display: grid;
    grid-template-columns: repeat(3,1fr);
-
    padding: 2em;
+   gap : 12em; 
 }
 
 .footer-principal{
