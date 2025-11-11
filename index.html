@@ -21,22 +21,21 @@
              <input type="text" id="buscador" placeholder="" class="buscador-header">
          </div>
          <div>
-            <a class="boton-acceder" href="/html/login.html">Accede</a>
+            <a class="boton-acceder" id="btnAcceder" href="/html/login.html">Accede</a>
          </div>
       </section>
    </header>
-   <header id="encabezado-secundario">
-      <section class="carrousel">
+   <header class="carrousel" id="encabezado-secundario">
+      <section>
          <div class="contenido-carrousel">
-            <a href=""><i class="fa-solid fa-chevron-left" style="color: #145222;"></i></a>
-            <img class="img-carrousel" src="assets/img/atiendo-boludos.jpg" alt="">
-            <a href=""><i class="fa-solid fa-chevron-right" style="color: #145222;"></i></a>
+            <a id="btnIzquierda" class="boton-carrousel" href=""><i class="fa-solid fa-chevron-left" style="color: #145222;"></i></a>
+            <img id="imgCarrousel" class="img-carrousel" src="assets/img/atiendo-boludos.jpg" alt="">
+            <a id="btnDerecha" class="boton-carrousel" href=""><i class="fa-solid fa-chevron-right" style="color: #145222;"></i></a>
          </div>
-         <div class="botones-carrousel">
-            <a class="circulo-carrousel" href=""><i class="fa-regular fa-circle" style="color: #145222;"></i></a>
-            <a class="circulo-carrousel" href=""><i class="fa-solid fa-circle" style="color: #145222;"></i></a>
-            <a class="circulo-carrousel" href=""><i class="fa-regular fa-circle" style="color: #145222;"></i></a>
-            <a class="circulo-carrousel" href=""><i class="fa-regular fa-circle" style="color: #145222;"></i></a>
+         <div id="crlCarrousel" class="circulo-carrousel-general">
+            <a class="circulo-carrousel" href=""><i class="fa-solid fa-circle" style="color: #dee2e6;"></i></a>
+            <a class="circulo-carrousel" href=""><i class="fa-solid fa-circle" style="color: #dee2e6;"></i></a>
+            <a class="circulo-carrousel" href=""><i class="fa-solid fa-circle" style="color: #dee2e6;"></i></a>
          </div>
       </section>
    </header>
@@ -372,5 +371,6 @@
    <!-- INICIO | NO MODIFICAR/NO QUITAR: 'cargar-datos.js' realiza la carga de datos -->
    <script type="module" src="js/cargar-datos.js"></script>
    <!-- FIN | NO MODIFICAR/NO QUITAR: 'cargar-datos.js' realiza la carga de datos -->
+    <script src="js/header.js"></script>
 </body>
 </html>
