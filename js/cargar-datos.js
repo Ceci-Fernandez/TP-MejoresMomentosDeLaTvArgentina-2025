@@ -1,5 +1,7 @@
 ﻿import items from "../data/items.json" with { type: 'json' };
 import configuracion from "../config/configuracion.json" with { type: 'json' };
+import { refrescarDecoraciones, generadorDeEstrellas } from "./index.js"
+
 
 const tabCategoria1 = document.getElementById("tab-categoria-1");
 
@@ -28,10 +30,14 @@ linksCategorias.forEach((linkCategoria) => {
          });
 
          articuloContenedor.id = Id;
+       
       });
+     refrescarDecoraciones();
    });
-});
 
+});
+  
 if (configuracion["modo-test-prod"] === "prod") {
    tabCategoria1.click();
+   
 };
