@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const emailSecundario = document.getElementById("email-secundario");
   const btnGuardar = document.getElementById("btn-guardar");
 
-  // --- VALIDACIONES ---
+
   const validarEmail = (email) => {
-    const regex = /^[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}$/; // acepta cualquier dominio
+    const regex = /^[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}$/; 
     return regex.test(email.trim());
   };
 
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const validarTipo = (valor) => ["DNI", "CI", "PASAPORTE"].includes(valor);
 
-  // --- FUNCIÓN PRINCIPAL ---
+  
   const validarFormulario = () => {
     const validaciones = [
       validarNombreApellido(nombre.value),
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btnGuardar.style.cursor = todoValido ? "pointer" : "not-allowed";
   };
 
-  // --- EVENTOS ---
+  
   [nombre, apellido, tipo, documento, fechaNacimiento, telefono, emailSecundario]
     .forEach((campo) => campo.addEventListener("input", validarFormulario));
 
