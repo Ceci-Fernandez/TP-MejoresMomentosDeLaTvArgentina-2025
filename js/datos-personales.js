@@ -150,10 +150,6 @@ document.addEventListener("DOMContentLoaded", function () {
       font-weight: bold;
       border-radius: 6px;
     }
-    input.valido {
-      border: 2px solid #28a745;
-      background-color: #e9fbe9;
-    }
     input.invalido {
       border: 2px solid #dc3545;
       background-color: #fdeaea;
