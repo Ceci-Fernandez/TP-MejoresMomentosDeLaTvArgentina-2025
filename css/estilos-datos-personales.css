@@ -1,4 +1,5 @@
 ﻿/* estilos-datos-personales.css */
+@import url(temas-colores-fuentes.css);
 .nav a{
     display: flex;
     justify-content:flex-start;
@@ -11,6 +12,45 @@
 .nav span{
     font-size: 1.5em;
 }
+.logo{
+   width: 11em;
+   height: 5em;
+}
+.section-encabezado-principal{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.buscador-header{
+   border-radius: 2em;
+   width: 100%;
+   padding: 0.70em 2.5em;
+   border-style: none;
+  background-color: var(--light-color-acento-1);
+}
+
+.caja-buscador-header{
+    display: flex;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.icono-lupa{
+   position: absolute;
+   left: 12px;
+   bottom: 6px;
+}
+
+.boton-acceder{
+    padding: 0.70em;
+    border-radius: 2.5em;
+    background: #145222;
+    margin-right: 2em;
+    font-weight: 600;
+}
 .container-datos{
     
     display: flex;
@@ -19,6 +59,7 @@
 }
 .opcion-menu{
     width: 100%;
+    padding: 2em;
 }
 .asterisco-rojo{
     color: red;
@@ -77,11 +118,6 @@ font-weight: 200;
     text-align: left;
     border-radius: .2em;
 }
-.menu-lista #mi-usuario{
-    
-    background-color: var(--dark-color-acento-2);
-}
-
 
 .favorito{
 width: 100%;
@@ -112,4 +148,8 @@ position: relative;
   cursor: pointer;
   transition: background-color 0.3s ease;
   border: none;
+}
+.menu-lista .activo {
+  background-color: var(--dark-color-acento-2);
+  font-weight: bold;
 }

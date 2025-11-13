@@ -14,22 +14,24 @@
 
 <body>
   <header id="encabezado-principal" class="encabezado-principal">
-    <section id="section-encabezado-principal" class="section-encabezado-principal">
-      <div>
-        <img class="logo" src="/assets/img/logo3.png" alt="img de logo">
-      </div>
-      <div id="seccion-de-iconos-header" class="seccion-iconos-header">
-        <a class="iconos-header" href=""><i class="fa-solid fa-user" style="color: #145222;"></i></a>
-        <a class="iconos-header" href=""><i class="fa-solid fa-heart" style="color: #145222;"></i></a>
-        <a class="iconos-header" href=""><i class="fa-solid fa-moon" style="color: #145222;"></i></a>
-      </div>
-    </section>
-  </header>
+      <section id="section-encabezado-principal" class="section-encabezado-principal">
+         <div>
+            <a href="/index.html"><img class="logo" src="../assets/img/logo3.png" alt="img de logo"></a>
+         </div>
+         <div id="buscador-header" class="caja-buscador-header">
+             <span class="icono-lupa"><i class="fa-solid fa-magnifying-glass" style="color: #145222;"></i></span>
+             <input type="text" id="buscador" placeholder="" class="buscador-header">
+         </div>
+         <div>
+            <a class="boton-acceder" id="btnAcceder" href="/html/login.html">Accede</a>
+         </div>
+      </section>
+   </header>
 
 <nav class="nav">
   <a href="/index.html">
  <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#FFFFFF"><path d="M226.67-186.67h140v-246.66h226.66v246.66h140v-380L480-756.67l-253.33 190v380ZM160-120v-480l320-240 320 240v480H526.67v-246.67h-93.34V-120H160Zm320-352Z"/></svg>
- <span>Volver a la home</span>
+ <span>Volver al home</span>
  </a>
 </nav>
  
@@ -38,26 +40,26 @@
       <div class="menu-lista">
         <h1>Mi cuenta</h1>
         <ul>
-          <li id="mi-usuario">Mi usuario</li>
-          <li id="datos-personales">Datos personales</li>
-          <li id="mis-favoritos">Mis favoritos</li>
+          <li><a href="#" data-target="mi-usuario-menu" id="mi-usuario">Mi usuario</a></li>
+          <li><a href="#" data-target="datos-personales-menu"id="datos-personales">Datos personales</a></li>
+          <li><a href="#" data-target="favoritos-menu" id="mis-favoritos">Mis favoritos</a></li>
         </ul>
       </div>
     </div>
 
-    <div class="opcion-menu hide" id="mi-usuario-menu">
+    <div class="opcion-menu" id="mi-usuario-menu">
       <form action="" class="opcion-menu-content">
         <h2>Mi usuario</h2>
         <label>Email principal</label>
         <input type="text" id="email-usuario" placeholder="Ej: aaa@gmail.com">
         <label>Contraseña</label>
         <input type="password" id="password" placeholder="" />
-        <button class="btn">Cambiar</button>
+        <button class="btn" id="btn-cambiar">Cambiar</button>
       </form>
     </div>
 
 
-    <div class=" opcion-menu" id="datos-personales-menu">
+    <div class="opcion-menu" id="datos-personales-menu">
       <form action="" class="opcion-menu-content">
         <h2>Datos personales</h2>
 
@@ -91,7 +93,7 @@
     </div>
 
 
-    <div class=" hide opcion-menu-content " id="favoritos">
+    <div class="opcion-menu" id="favoritos-menu">
       <h2>Mis Favoritos</h2>
       <div class="contenedor-favoritos">
       <div class="favorito">
