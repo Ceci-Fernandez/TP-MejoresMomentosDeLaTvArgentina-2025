@@ -37,30 +37,36 @@
 
          <div class="nombreUsuario">
             <label for="nombre">Nombre de usuario</label>
-            <input type="text" id="usuario" name="usuario" placeholder="Ingrese su nombre" required>
+            <input type="text" id="usuario" name="usuario" placeholder="Ingrese su nombre" >
+            <span id="errorNombreUsuario" class="mensaje-error"></span>
          </div>
 
          <div class="email">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Ingrese su email" required>
+            <input type="email" name="email" id="email" placeholder="Ingrese su email" >
+            <span id="errorEmail" class="mensaje-error"></span>
          </div>
 
          <div class="contrasenia">
             <label for="contrasenia">Contraseña</label>
-            <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingrese su contraseña" required>
+            <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingrese su contraseña" >
+            <span id="errorContrasenia" class="mensaje-error"></span>
          </div>
 
          <div class="confirmacionContrasenia">
-            <label for="confirmacion">Confirmacion de contraseña</label>
-            <input type="password" name="confirmacionContrasenia" id="confirmacionContrasenia" placeholder="Ingrese nuevamente su contraseña" required>
+            <label for="confirmacionContrasenia">Confirmacion de contraseña</label>
+            <input type="password" name="confirmacionContrasenia" id="confirmacionContrasenia" placeholder="Ingrese nuevamente su contraseña" >
+            <span id="errorConfContrasenia" class="mensaje-error"></span>
          </div>
+
+         <div id="mensaje-error" class="mensaje-error-general"></div>
 
          <div class="tieneCuenta"> ¿Ya tenés una cuenta? <a href="login.html">Iniciar sesión</a>
          </div>
          <br>
 
          <div class="contenedor-checkbox">
-            <input type="checkbox" id="acepto-condiciones" required>
+            <input type="checkbox" id="acepto-condiciones" >
             <label for="acepto-condiciones"> <a href="#">Acepto los Términos de Servicio y las Política de Privacidad</a></label>
          </div>
 
