@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   for (var i = 0; i < menuLinks.length; i++) { 
     menuLinks[i].addEventListener("click", function (e) {
       e.preventDefault();
-      var targetId = this.querySelector("a").getAttribute("data-target");
+      var target = this.querySelector("a").getAttribute("data-target");
       
      
       for (var j = 0; j < secciones.length; j++) {
@@ -30,16 +30,16 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       
       
-      var targetSection = document.getElementById(targetId);
-      if (targetSection) {
-        targetSection.classList.add("activo");
-        targetSection.classList.remove("hide");
+      var secciontarget = document.getElementById(target);
+      if (secciontarget) {
+        secciontarget.classList.add("activo");
+        secciontarget.classList.remove("hide");
       }
       
       
-      var allMenuItems = document.querySelectorAll(".menu-lista li");
-      for (var k = 0; k < allMenuItems.length; k++) {
-        allMenuItems[k].classList.remove("activo");
+      var menuItems = document.querySelectorAll(".menu-lista li");
+      for (var k = 0; k < menuItems.length; k++) {
+        menuItems[k].classList.remove("activo");
       }
       this.classList.add("activo");
     });
