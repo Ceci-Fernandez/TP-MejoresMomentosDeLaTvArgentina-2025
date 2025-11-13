@@ -1,4 +1,6 @@
-const nombreUsuario = document.getElementById("usuario");
+document.addEventListener('DOMContentLoaded', () => {
+
+const nombreUsuario = document.getElementById("nombreUsuario");
 const email = document.getElementById("email");
 const contrasenia = document.getElementById("contrasenia");
 const confirmacionContrasenia = document.getElementById("confirmacionContrasenia");
@@ -28,7 +30,7 @@ function validarCamposObligatorios() {
     const emailLleno = email.value !== "";
     const contraseniaLleno = contrasenia.value !== "";
     const confirmacionLleno = confirmacionContrasenia.value !== "";
-    const casillaMarcada = aceptoCondiciones.checked; // 'checkboxChecked' ahora es 'casillaMarcada'
+    const casillaMarcada = aceptoCondiciones.checked; 
 
     const todoLleno = nombreLleno && emailLleno && contraseniaLleno && confirmacionLleno && casillaMarcada;
 
@@ -109,6 +111,6 @@ function validarFormulario(event) {
 
 botonRegistro.addEventListener("click", validarFormulario);
 
-document.addEventListener('DOMContentLoaded', validarCamposObligatorios);
+});
 
 
