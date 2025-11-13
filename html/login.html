@@ -20,25 +20,23 @@
       </section>
    </header>
 
-   <div class="formulario-login">
+   <div id="formulario-login" class="formulario-login">
       <h2 class="login-titulo">Login | <a href="/html/registrarse.html">Registrarse</a></h2>
       
       <form class="login-formulario" id="login-formulario" action="/index.html" method="get">
 
          <div class="usuario">
-            <label for="usuario">Nombre de usuario</label>
-            <input type="text" id="usuario" name="usuario" placeholder="Ingrese su nombre" required>
+            <label for="usuario">Correo</label>
+            <input type="text" id="correo" placeholder="Ingrese su correo" required>
+            <div id="texto-error-correo" ></div>
          </div>
 
          <div class="contrasenia">
             <label for="contrasenia">Contraseña</label>
-            <input type="password" id="contrasenia" name="contrasenia" placeholder="Ingrese su contraseña" required>
+            <input type="password" id="contrasenia"placeholder="Ingrese su contraseña" required>
+            <div id="texto-error-contrasenia" ></div>
          </div>
 
-         <div class="recordarme">
-            <input type="checkbox" id="recordarme" name="recordarme">
-            <label for="recordarme">Recordarme</label>
-         </div>
 
          <div class="olvide-contrasenia">
             <a href="/html/recuperar-password.html">¿Olvidaste tu contraseña?</a>
@@ -82,6 +80,7 @@
       </div>
       <p class="copyright">&copy; 2025 Momentos de la TV Argentina. UNLaM.Todos los derechos reservados.</p>
 
-   </footer>
+   </footer>  
+   <script src="../js/login.js"></script>
 </body>
 </html>
