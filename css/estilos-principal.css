@@ -23,47 +23,30 @@ a{
 }
 
 #navegacion-categoria {
+  background-color: var(--light-color-acento-3);
    display: flex;
-   margin-right: 20px;
-   margin-left: 20px;
-   height: 80px;
-   justify-content: space-between;
+   height: 3em;
+   justify-content: center;
    align-items: center;
    flex-wrap: wrap; 
    padding: 10px;
 }
-#tab-categoria-1{
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 26px;
-  transition: 0.3s;
-  font-size: 18px;
-  font-weight: 600;
-  background-color: #00c46c;     
-}
 
 .tab-categoria{
-   color: black;
+  color: var(--light-color-texto);
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 1em 1em;
   border-radius: 26px;
   transition: 0.3s;
-  font-size: 18px;
-  font-weight: 600;
-  border: none;
-   background-color: #dee2e6;
+  font-size: 17px;
+  font-weight: 300;
+  
 }
 
 .tab-categoria:hover{
-background-color: var(--light-color-acento-3);
-color:#F2F3F3;
+color:#2cb54c;
 }
 
-#tab-categoria-1:hover{
-background-color: var(--light-color-acento-3);
-color:#F2F3F3;
-}
 
 .container-categoria {
   display: grid;
