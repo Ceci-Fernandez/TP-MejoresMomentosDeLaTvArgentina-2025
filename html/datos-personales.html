@@ -1,138 +1,172 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../css/estilos-datos-personales.css">
-   <link rel="stylesheets" href= "../css/temas-colores-fuentes.css">
-   <link rel="stylesheet" href="/css/estilos-principal.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-   
-   <title>Mi Perfil</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/estilos-datos-personales.css">
+  <link rel="stylesheet" href="../css/temas-colores-fuentes.css">
+  <link rel="stylesheet" href="/css/estilos-principal.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <script src="../js/datos-personales.js" defer></script>
+  <title>Mi Perfil</title>
 </head>
+
 <body>
   <header id="encabezado-principal" class="encabezado-principal">
       <section id="section-encabezado-principal" class="section-encabezado-principal">
          <div>
-            <img class="logo" src="/assets/img/logo3.png" alt="img de logo">
+            <a href="/index.html"><img class="logo" src="../assets/img/logo3.png" alt="img de logo"></a>
          </div>
          <div id="buscador-header" class="caja-buscador-header">
              <span class="icono-lupa"><i class="fa-solid fa-magnifying-glass" style="color: #145222;"></i></span>
              <input type="text" id="buscador" placeholder="" class="buscador-header">
          </div>
-         <div id="seccion de iconos header" class="seccion-iconos-header">
-            <a class="iconos-header" href=""><i class="fa-solid fa-user" style="color: #145222;"></i></a>
-            <a class="iconos-header" href=""><i class="fa-solid fa-heart" style="color: #145222;"></i></a>
-            <a class="iconos-header" href=""><i class="fa-solid fa-moon" style="color: #145222;"></i></a>
+         <div>
+            <a class="boton-acceder" id="btnAcceder" href="/html/login.html">Accede</a>
          </div>
       </section>
    </header>
 
-   <main class="container-datos">
-   <h6 class="mi-cuenta" id="mi-cuenta-mi-usuario"> Mi cuenta  >  Mi usuario</h6>
-   <section class="parte1">
-      <h1 class=" mi-usuario" id="item-mi-usuario" >Mi usuario</h1>
-      <p class="caja-email-principal" id="email-caja">
-      <div class="cuadro de texto email"><form action="#" method="post">
-    <label for="email">Email principal</label><br>
-    <input type="email" id="email" name="email" placeholder="@gmail.com" required><br><br>
-    
-    <button type="submit" id="boton-guardar-cambios">Guardar cambios</button></div>
-      <br>
-    <p class="contraseña" id="contra">
-      contraseña 
-       <form action="#" method="post">
-    <div class="form-container">
-      <input type="password" id="password" name="password" placeholder="" required>
-      <button type="submit" id="boton-cambiar"><i class="fa fa-pencil-alt"></i> Cambiar</button>
-    </div>
-  </form>
-   </p>
-</section>
-<h6 class="mi cuenta datos personales" id="mi-cuenta-datos"> Mi cuenta > datos personales</h6>
-<h1 class="datos personales" id="datos-per"> Datos personales</h1>
-
-<section class="parte2">
-   <form action="#" method="post" class="formulario"></form>
-   
-      <div class="form-group" id="caja-nombre">
-        <label for="nombre">Nombre</label><br>
-        <input type="text" id="nombre" name="nombre" required>
-      </div>
-      <div class="form-group" id="caja-apellido">
-        <label for="apellido">Apellido</label><br>
-        <input type="text" id="apellido" name="apellido" required>
-      </div>
-    
-
-    
-      <div class="form-group" id="caja-tipo">
-        <label for="tipo">Tipo</label><br>
-        <input type="text" id="tipo" name="tipo">
-      </div>
-      <div class="form-group" id="caja-num">
-        <label for="documento">Número de documento</label><br>
-        <input type="text" id="documento" name="documento" required>
-      </div>
-      <div class="form-group" id="caja-f-nac">
-        <label for="fecha">Fecha de nacimiento</label><br>
-        <input type="date" id="fecha" name="fecha">
+<nav class="nav">
+  <a href="/index.html">
+ <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#FFFFFF"><path d="M226.67-186.67h140v-246.66h226.66v246.66h140v-380L480-756.67l-253.33 190v380ZM160-120v-480l320-240 320 240v480H526.67v-246.67h-93.34V-120H160Zm320-352Z"/></svg>
+ <span>Volver al home</span>
+ </a>
+</nav>
+ 
+  <main class="container-datos" >
+    <div class="menu-aside-perfil" id="menu-aside-perfil">
+      <div class="menu-lista">
+        <h1>Mi cuenta</h1>
+        <ul>
+          <li><a href="#" data-target="mi-usuario-menu" id="mi-usuario">Mi usuario</a></li>
+          <li><a href="#" data-target="datos-personales-menu"id="datos-personales">Datos personales</a></li>
+          <li><a href="#" data-target="favoritos-menu" id="mis-favoritos">Mis favoritos</a></li>
+        </ul>
       </div>
     </div>
 
-    
-      <div class="form-group" id="caja-tel">
-        <label for="telefono">Teléfono celular</label><br>
-        <input type="tel" id="telefono" name="telefono">
+    <div class="opcion-menu" id="mi-usuario-menu">
+      <form action="" class="opcion-menu-content">
+        <h2>Mi usuario</h2>
+        <label>Email principal</label>
+        <input type="text" id="email-usuario" placeholder="Ej: aaa@gmail.com">
+        <label>Contraseña</label>
+        <input type="password" id="password" placeholder="" />
+        <button class="btn" id="btn-cambiar">Cambiar</button>
+      </form>
+    </div>
+
+
+    <div class="opcion-menu" id="datos-personales-menu">
+      <form action="" class="opcion-menu-content">
+        <h2>Datos personales</h2>
+
+        <label id="nombre-usuario">Nombre <span class="asterisco-rojo">*</span></label>
+        <input type="text" id="nombre" placeholder="" />
+
+        <label>Apellido <span class="asterisco-rojo">*</span></label>
+        <input type="text" id="apellido" placeholder="" />
+
+        <label>Tipo  <span class="asterisco-rojo">*</span></label>
+        <select id="tipo">
+          <option>DNI</option>
+          <option>CI</option>
+          <option>PASAPORTE</option>
+        </select>
+
+        <label>Número de documento <span class="asterisco-rojo">*</span></label>
+        <input type="text" id="documento" placeholder=""/>
+
+        <label>Fecha de nacimiento</label>
+        <input type="date" id="fecha-nacimiento" placeholder="" />
+
+        <label>Teléfono celular</label>
+        <input type="text" id="telefono" placeholder="" />
+
+        <label>Email <span class="asterisco-rojo">*</span> </label>
+        <input type="email" id="email-secundario" placeholder="Ej: aaa@gmail.com"/>
+
+        <button class="btn" id="btn-guardar">Guardar cambios</button>
+      </form>
+    </div>
+
+
+    <div class="opcion-menu" id="favoritos-menu">
+      <h2>Mis Favoritos</h2>
+      <div class="contenedor-favoritos">
+      <div class="favorito">
+       <svg xmlns="http://www.w3.org/2000/svg" height="40px"
+        viewBox="0 -960 960 960" width="40px" fill="#EA3323">
+        <path d="m480-120.67-46.67-42q-104.18-95.08-172.25-164.04Q193-395.67 152.67-450.17q-40.34-54.5-56.5-99.16Q80-594 80-640q0-91.44 61.33-152.72 61.34-61.28 152-61.28 55.34 0 103.34 25.33 48 25.34 83.33 72.67 39.33-49.33 86.33-73.67 47-24.33 100.34-24.33 90.66 0 152 61.28Q880-731.44 880-640q0 46-16.17 90.67-16.16 44.66-56.5 99.16-40.33 54.5-108.41 123.46-68.07 68.96-172.25 164.04l-46.67 42Zm0-88.66q99.49-90.67 163.75-155.5Q708-429.67 745.67-478.17q37.66-48.5 52.66-86.42t15-75.31q0-64.1-41.33-105.77-41.33-41.66-105.18-41.66-50.02 0-92.59 29.83-42.56 29.83-65.56 81.5h-58q-22.34-51-64.9-81.17-42.57-30.16-92.59-30.16-63.85 0-105.18 41.66-41.33 41.67-41.33 105.88 0 37.46 15 75.62 15 38.17 52.66 87Q252-428.33 316.67-363.83q64.66 64.5 163.33 154.5Zm0-289Z"/></svg>
+        <img src="/assets/img/categoria00-item01.png" alt="">
       </div>
-      <div class="form-group" id="caja-email-sec">
-        <label for="email">Email secundario</label><br>
-        <input type="email" id="email-sec" name="email">
+      <div class="favorito">
+       <svg xmlns="http://www.w3.org/2000/svg" height="40px"
+        viewBox="0 -960 960 960" width="40px" fill="#EA3323">
+        <path d="m480-120.67-46.67-42q-104.18-95.08-172.25-164.04Q193-395.67 152.67-450.17q-40.34-54.5-56.5-99.16Q80-594 80-640q0-91.44 61.33-152.72 61.34-61.28 152-61.28 55.34 0 103.34 25.33 48 25.34 83.33 72.67 39.33-49.33 86.33-73.67 47-24.33 100.34-24.33 90.66 0 152 61.28Q880-731.44 880-640q0 46-16.17 90.67-16.16 44.66-56.5 99.16-40.33 54.5-108.41 123.46-68.07 68.96-172.25 164.04l-46.67 42Zm0-88.66q99.49-90.67 163.75-155.5Q708-429.67 745.67-478.17q37.66-48.5 52.66-86.42t15-75.31q0-64.1-41.33-105.77-41.33-41.66-105.18-41.66-50.02 0-92.59 29.83-42.56 29.83-65.56 81.5h-58q-22.34-51-64.9-81.17-42.57-30.16-92.59-30.16-63.85 0-105.18 41.66-41.33 41.67-41.33 105.88 0 37.46 15 75.62 15 38.17 52.66 87Q252-428.33 316.67-363.83q64.66 64.5 163.33 154.5Zm0-289Z"/></svg>
+        <img src="/assets/img/categoria00-item01.png" alt="">
+      </div>
+      <div class="favorito">
+       <svg xmlns="http://www.w3.org/2000/svg" height="40px"
+        viewBox="0 -960 960 960" width="40px" fill="#EA3323">
+        <path d="m480-120.67-46.67-42q-104.18-95.08-172.25-164.04Q193-395.67 152.67-450.17q-40.34-54.5-56.5-99.16Q80-594 80-640q0-91.44 61.33-152.72 61.34-61.28 152-61.28 55.34 0 103.34 25.33 48 25.34 83.33 72.67 39.33-49.33 86.33-73.67 47-24.33 100.34-24.33 90.66 0 152 61.28Q880-731.44 880-640q0 46-16.17 90.67-16.16 44.66-56.5 99.16-40.33 54.5-108.41 123.46-68.07 68.96-172.25 164.04l-46.67 42Zm0-88.66q99.49-90.67 163.75-155.5Q708-429.67 745.67-478.17q37.66-48.5 52.66-86.42t15-75.31q0-64.1-41.33-105.77-41.33-41.66-105.18-41.66-50.02 0-92.59 29.83-42.56 29.83-65.56 81.5h-58q-22.34-51-64.9-81.17-42.57-30.16-92.59-30.16-63.85 0-105.18 41.66-41.33 41.67-41.33 105.88 0 37.46 15 75.62 15 38.17 52.66 87Q252-428.33 316.67-363.83q64.66 64.5 163.33 154.5Zm0-289Z"/></svg>
+        <img src="/assets/img/categoria00-item01.png" alt="">
+      </div>
+      <div class="favorito">
+       <svg xmlns="http://www.w3.org/2000/svg" height="40px"
+        viewBox="0 -960 960 960" width="40px" fill="#EA3323">
+        <path d="m480-120.67-46.67-42q-104.18-95.08-172.25-164.04Q193-395.67 152.67-450.17q-40.34-54.5-56.5-99.16Q80-594 80-640q0-91.44 61.33-152.72 61.34-61.28 152-61.28 55.34 0 103.34 25.33 48 25.34 83.33 72.67 39.33-49.33 86.33-73.67 47-24.33 100.34-24.33 90.66 0 152 61.28Q880-731.44 880-640q0 46-16.17 90.67-16.16 44.66-56.5 99.16-40.33 54.5-108.41 123.46-68.07 68.96-172.25 164.04l-46.67 42Zm0-88.66q99.49-90.67 163.75-155.5Q708-429.67 745.67-478.17q37.66-48.5 52.66-86.42t15-75.31q0-64.1-41.33-105.77-41.33-41.66-105.18-41.66-50.02 0-92.59 29.83-42.56 29.83-65.56 81.5h-58q-22.34-51-64.9-81.17-42.57-30.16-92.59-30.16-63.85 0-105.18 41.66-41.33 41.67-41.33 105.88 0 37.46 15 75.62 15 38.17 52.66 87Q252-428.33 316.67-363.83q64.66 64.5 163.33 154.5Zm0-289Z"/></svg>
+        <img src="/assets/img/categoria00-item01.png" alt="">
+      </div>
+      <div class="favorito">
+       <svg xmlns="http://www.w3.org/2000/svg" height="40px"
+        viewBox="0 -960 960 960" width="40px" fill="#EA3323">
+        <path d="m480-120.67-46.67-42q-104.18-95.08-172.25-164.04Q193-395.67 152.67-450.17q-40.34-54.5-56.5-99.16Q80-594 80-640q0-91.44 61.33-152.72 61.34-61.28 152-61.28 55.34 0 103.34 25.33 48 25.34 83.33 72.67 39.33-49.33 86.33-73.67 47-24.33 100.34-24.33 90.66 0 152 61.28Q880-731.44 880-640q0 46-16.17 90.67-16.16 44.66-56.5 99.16-40.33 54.5-108.41 123.46-68.07 68.96-172.25 164.04l-46.67 42Zm0-88.66q99.49-90.67 163.75-155.5Q708-429.67 745.67-478.17q37.66-48.5 52.66-86.42t15-75.31q0-64.1-41.33-105.77-41.33-41.66-105.18-41.66-50.02 0-92.59 29.83-42.56 29.83-65.56 81.5h-58q-22.34-51-64.9-81.17-42.57-30.16-92.59-30.16-63.85 0-105.18 41.66-41.33 41.67-41.33 105.88 0 37.46 15 75.62 15 38.17 52.66 87Q252-428.33 316.67-363.83q64.66 64.5 163.33 154.5Zm0-289Z"/></svg>
+        <img src="/assets/img/categoria00-item01.png" alt="">
       </div>
     </div>
-  </form>
-
-</section>
-<br>
-<br>
-<form>
-   <button type="submit" class="btn" id="boton-guardar-cambios-final">GUARDAR CAMBIOS</button>
-</form>
 </div>
- <footer id="footer-principal" class="footer-principal">
+  </main>
+  <footer id="footer-principal" class="footer-principal">
+    <div class="container-columnas-footer">
       <div id="footer-principal-derecha" class="columna-footer">
-         <h4>Equipo</h4> 
-         <ul>
-            <li>Ariana</li>
-            <li>Cecilia</li>
-            <li>Melina</li>
-            <li>Tomas</li>
-         </ul>
+        <h4>Equipo</h4>
+        <ul>
+          <li>Ariana</li>
+          <li>Cecilia</li>
+          <li>Melina</li>
+          <li>Tomas</li>
+        </ul>
       </div>
-      <div id="footer-principal-izquierda"  class="columna-footer">
-         <h4>Categorias</h4>
-            <ul>
-            <li><a href="#">Noticiero</a></li>
-            <li><a href="#">Peliculas/series</a></li>
-            <li><a href="#">Deportes</a></li>
-            <li><a href="#">Farándula/programa</a></li>
-            <li><a href="#">Política</a></li>
-         </ul>
 
-         
+      <div id="footer-principal-izquierda" class="columna-footer">
+        <h4>Categorias</h4>
+        <ul>
+          <li><a href="#">Noticiero</a></li>
+          <li><a href="#">Peliculas/series</a></li>
+          <li><a href="#">Deportes</a></li>
+          <li><a href="#">Farándula/programa</a></li>
+          <li><a href="#">Política</a></li>
+        </ul>
       </div>
-     
-      
-       <div id="footer-principal-centro" class="columna-footer">
-         <h4>Seguinos en redes sociales</h4>
-         <div class="logos_redes">
-         <a href="#"><img src="/assets/logos-redes/facebook (1).png" alt="facebook_logo"></a>
-         <a href="#"><img src="/assets/logos-redes/youtube.png" alt="youtube.logo"></a>
-         <a href="#"><img src="/assets/logos-redes/instagram (1).png" alt="instagram_logo"></a>
-      </div>
-      </div>
-      <p>&copy; 2025 Momentos de la TV Argentina. UNLaM.Todos los derechos reservados.</p>
 
-   </footer>
+      <div id="footer-principal-centro" class="columna-footer">
+        <h4>Seguinos en redes sociales</h4>
+        <div class="logos_redes">
+          <a href="https://www.facebook.com/UnlamOficial/?locale=es_LA"><img src="/assets/logos-redes/facebook.png"
+              alt="facebook_logo"></a>
+          <a href="https://www.youtube.com/c/UNLaMOficial"><img src="/assets/logos-redes/youtube (1).png"
+              alt="youtube.logo"></a>
+          <a href="https://www.instagram.com/unlamoficial/?hl=es"><img src="/assets/logos-redes/instagram (2).png"
+              alt="instagram_logo"></a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2025 Momentos de la TV Argentina. UNLaM.Todos los derechos reservados.</p>
+
+  </footer>
 </body>
+
 </html>
