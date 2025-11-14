@@ -3,7 +3,11 @@ const correoInput = document.getElementById("correo");
 const contraseniaInput = document.getElementById("contrasenia");
 const sesionBtn = document.getElementById("sesionBtn");
 
+const correoError = document.getElementById("texto-error-correo");
+const contraseniaError = document.getElementById("texto-error-contrasenia");
+
 sesionBtn.disabled = true;
+sesionBtn.style.opacity = "0.6";
 sesionBtn.style.cursor = "not-allowed";
 
 function validarCorreo(correo) {
@@ -22,19 +26,17 @@ function verificarCampos() {
 
   if (correoValido && contraseniaValida) {
     sesionBtn.disabled = false;
+    sesionBtn.style.opacity = "1";
     sesionBtn.style.cursor = "pointer";
   } else {
     sesionBtn.disabled = true;
+    sesionBtn.style.opacity = "0.6";
     sesionBtn.style.cursor = "not-allowed";
   }
 }
 
-function validarCampoIndividual(input, funcionValidacion, msjError) {
-
-  const errorPrevio = input.nextElementSibling;
-  if (errorPrevio && errorPrevio.classList.contains("error-texto")) {
-    errorPrevio.remove();
-  }
+function validarCampoIndividual(input, funcionValidacion, msjError, contenedorError) {
+  contenedorError.innerHTML = "";
 
   const valor = input.value.trim();
   const esValido = funcionValidacion(valor);
@@ -43,42 +45,37 @@ function validarCampoIndividual(input, funcionValidacion, msjError) {
     input.style.border = "2px solid red";
   } else if (!esValido) {
     input.style.border = "2px solid red";
+
     const p = document.createElement("p");
     p.classList.add("error-texto");
     p.textContent = msjError;
-    input.insertAdjacentElement("afterend", p);
+    contenedorError.appendChild(p);
+
   } else {
-    input.style.border = "2px solid green";
+    input.style.border = "1px solid var(--light-color-acento-1)";
   }
 }
 
-correoInput.addEventListener("input", () => {
+correoInput.addEventListener("input", verificarCampos);
+contraseniaInput.addEventListener("input", verificarCampos);
+
+correoInput.addEventListener("blur", () => {
   validarCampoIndividual(
-    correoInput,
-    validarCorreo,
-    "Ingrese un email válido (@, .com, .org o .net)"
+    correoInput, validarCorreo, "Ingrese un email válido (@, .com, .org o .net)",
+    correoError
   );
-  verificarCampos();
 });
 
-contraseniaInput.addEventListener("input", () => {
+contraseniaInput.addEventListener("blur", () => {
   validarCampoIndividual(
-    contraseniaInput,
-    validarContrasenia,
-    "La contraseña debe tener 8-12 caracteres, incluir mayúscula, minúscula, número y un símbolo (#?!%$)"
+    contraseniaInput, validarContrasenia, "La contraseña debe tener 8-12 caracteres, incluir mayúscula, minúscula, número y un símbolo (#?!%$)",
+    contraseniaError
   );
-  verificarCampos();
 });
 
 formulario.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  if (!sesionBtn.disabled) {
-    formulario.reset();
-    sesionBtn.disabled = true;
-    sesionBtn.style.cursor = "not-allowed";
-    correoInput.style.border = "";
-    contraseniaInput.style.border = "";
-    document.querySelectorAll(".error-texto").forEach((e) => e.remove());
+  if (sesionBtn.disabled) {
+    e.preventDefault();
+    return;
   }
 });
