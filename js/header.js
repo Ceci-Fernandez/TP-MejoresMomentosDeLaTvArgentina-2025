@@ -27,8 +27,10 @@ buscador.addEventListener('blur', () => {
 
 const img = [ 
   "assets/img/atiendo-boludos.jpg",
-  "assets/img/me-gusta-el-arte.jpeg",
-  "assets/img/maniobra-hemlichpng.webp"
+  "assets/img/tres-empanadas.jpg",
+  "assets/img/que miras bobo.jpeg",
+  "assets/img/no me quemes.png",
+  "assets/img/no se inunda.gif"
 ];
 
 let actual = 0;
@@ -50,11 +52,11 @@ function avanzarAuto() {
   mostrarImagen();
 }
 
-let intervalo = setInterval(avanzarAuto, 2000);
+let intervalo = setInterval(avanzarAuto, 3000);
 
 function reiniciarIntervalo() {
   clearInterval(intervalo);
-  intervalo = setInterval(avanzarAuto, 2000);
+  intervalo = setInterval(avanzarAuto, 3000);
 }
 
 btnDerecha.addEventListener("click", (eventoFlecha) => {

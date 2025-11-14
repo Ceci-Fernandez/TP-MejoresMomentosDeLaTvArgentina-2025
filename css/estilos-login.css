@@ -89,15 +89,27 @@ body {
     background-color: #0f3e1b;
 }
 
+.usuario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.contrasenia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .error-texto {
-  display: block;
-  color: red;
-  font-size: 0.75rem;
-  margin-top: -0.5rem;
-  margin-bottom: 0.8rem;
-  line-height: 1.2;
-  max-width: 100%;
-  word-wrap: break-word;
+display: flex;
+text-align: center;
+color: red;
+font-size: 0.7em;
+margin: 0;
+padding: 0;
+margin-bottom: 1em;
 }
 
 @media screen and (max-width: 768px) {

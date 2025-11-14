@@ -283,7 +283,7 @@ color:#F2F3F3;
 }
 
 .boton-acceder{
-    padding: 0.70em;
+    padding: 0.90em;
     border-radius: 2.5em;
     background: #145222;
     margin-right: 2em;
@@ -291,21 +291,21 @@ color:#F2F3F3;
 }
 
 .img-carrousel{
+  width: 75vh;
   height: 50vh;
-  border-radius: 1.5em;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .contenido-carrousel{
    display: flex;
    justify-content: center;
    align-items: center;
+   background: black;
 }
 
 .boton-carrousel{
   margin-left: 1em;
   margin-right: 1em;
-  font-size: 2em;
+  font-size: 3em;
 }
 
 .circulo-carrousel-general{
@@ -315,7 +315,7 @@ color:#F2F3F3;
 }
 
 .circulo-carrousel{
-   padding: 3px;
+   padding: 5px;
 }
 
   .container-columnas-footer{
