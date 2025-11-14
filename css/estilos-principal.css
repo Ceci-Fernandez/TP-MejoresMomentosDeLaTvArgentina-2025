@@ -47,6 +47,10 @@ a{
 color:#2cb54c;
 }
 
+.tab-categoria.activa {
+  color: #2cb54c;
+  font-weight: bold;
+}
 
 .container-categoria {
   display: grid;
