@@ -11,13 +11,6 @@ main{
   background-color: var(--light-color-fondo);
 }
 
-header{
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-}
-
 .formulario-registro{
     max-width: 25em;
     width: 90%;
@@ -87,7 +80,6 @@ input[type="checkbox"]{
   border-radius: 4px;
   color: var(--light-color-texto);
   font-weight: bold;
-  cursor: pointer;
   transition: background-color 0.3s ease;
   border: none;
 }
@@ -118,8 +110,19 @@ input[type="checkbox"]{
 color: var(--light-color-acento-2);
 }
 
-.footer-principal {
-    display: flex;
-    flex-direction: column;
-    
+.input-error{
+  border: 2px solid red !important;
+  
+}
+
+.error-texto {
+  color: red;
+  font-size: 14px;
+  margin-top: 0.2px;
+  display: block;
+}
+
+#btn-registrar:disabled{
+  cursor: not-allowed;
+  opacity: 0.6;
 }
