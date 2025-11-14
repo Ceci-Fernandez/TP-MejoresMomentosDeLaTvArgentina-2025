@@ -1,9 +1,6 @@
 import items from "/data/items.json" with { type: 'json' };
 
-
 //Efectos de items
-
-  
 
 const articulos = document.querySelectorAll(".articulo-categoria")
 const categorias = document.querySelectorAll(".tab-categoria")
@@ -78,3 +75,4 @@ export function refrescarDecoraciones() {
 }
 
 refrescarDecoraciones();
+
