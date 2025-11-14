@@ -92,8 +92,8 @@ a{
  .container-columnas-footer{
    display: grid;
    grid-template-columns: repeat(3,1fr);
-
    padding: 2em;
+   gap : 12em; 
 }
 
 .footer-principal{
@@ -103,13 +103,9 @@ a{
   flex-direction: column;
 
 }
-
-.columna-footer{
- display: flex;
- flex-direction: column;
- text-align: center;
- align-items: center;
-
+.columna-footer {
+  display: flex;
+  flex-direction: column;
 }
 
 .logos_redes{
@@ -129,7 +125,7 @@ a{
 
 .copyright{
 text-align: center;
-background-color: var(--dark-color-acento-1);
+background-color: var(--dark-color-acento-3);
 width: 100%;
 margin: 0;
 }
@@ -160,10 +156,11 @@ margin: 0;
     flex-direction: column;
     gap: 1em;
   }
+ 
 
   .columna-footer {
     width: 100%;
-    align-items: center;
+    align-items: left;
     
   }
 

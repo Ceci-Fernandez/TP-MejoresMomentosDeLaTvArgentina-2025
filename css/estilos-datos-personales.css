@@ -1,90 +1,145 @@
 ﻿/* estilos-datos-personales.css */
+@import url(temas-colores-fuentes.css);
+.nav a{
+    display: flex;
+    justify-content:flex-start;
+    padding: 1em 1em 1em .3em;
+    gap: 1em;
+    background-color: var(--dark-color-acento-2);
+    max-width: 100%;
+    color:var(--light-color-texto);
+}
+.nav span{
+    font-size: 1.5em;
+}
+.logo{
+   width: 11em;
+   height: 5em;
+}
+.section-encabezado-principal{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
 
-body{
+.buscador-header{
+   border-radius: 2em;
    width: 100%;
-  
+   padding: 0.70em 2.5em;
+   border-style: none;
+  background-color: var(--light-color-acento-1);
+}
+
+.caja-buscador-header{
+    display: flex;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.icono-lupa{
+   position: absolute;
+   left: 12px;
+   bottom: 6px;
+}
+
+.boton-acceder{
+    padding: 0.70em;
+    border-radius: 2.5em;
+    background: #145222;
+    margin-right: 2em;
+    font-weight: 600;
+}
+.container-datos{
+    
+    display: flex;
+    margin: 0;
+
+}
+.opcion-menu{
+    width: 100%;
+    padding: 2em;
+}
+.asterisco-rojo{
+    color: red;
+}
+ .opcion-menu-content{
+    width: 100%;
+   max-width: 90%;
+   display: flex;
+   flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+}
+.contenedor-favoritos{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+width: 100%;
+gap: 1em;
+}
+.opcion-menu-content input, .opcion-menu-content select{
+    width: 60%;
+    padding: 1em;
+    border-radius: .5em;
+}
+
+.hide{
+    display: none;
+}
+
+.menu-aside-perfil {
+    height:auto;
+    background-color: var(--dark-color-acento-3);
+    color: var(--light-color-texto);
+    padding: 1em;
+    margin: 0; 
+   text-align: left;
+   width: 20%;
+   margin-bottom: 10px;
+   margin-top: 10px ;
+    border-radius: .5em;
 }
 
 
-#mi-cuenta-datos{
-    width: fit-content;
+.menu-lista ul{
+    padding: 0;
+    text-align: left;
 }
-#email{
-    width: fit-content;
+.menu-lista h1{
+font-size: 2em;
+font-weight: 200;
 }
-#mi-cuenta-mi-usuario{
-    width: fit-content;
+.menu-lista li{
+    padding: .5em;
+    border: .3 solid rgb(33, 31, 31);
+    margin: 0 0 .5em;
+    list-style: none;
+    text-align: left;
+    border-radius: .2em;
 }
-#item-mi-usuario{
-    width: fit-content;
-}
-#contra{
-    width: fit-content;
-}
-#datos-per{
-    max-width: fit-content;
-}
-.parte1{
-   margin-bottom: 50px;
-    border-color: black;
-    border-width: 10px;
-}
-.parte2{
-    display: grid;
-   grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "nombre apellido ."
-                        "tipo numero fecha"
-                         "tel email-sec .";
-    gap: 8px;
-    row-gap: 10px;
-    max-width: 600px;
 
+.favorito{
+width: 100%;
+position: relative;
 }
-#caja-nombre{
-    grid-area: nombre;
 
+.favorito svg{
+    position: absolute;
+    top: 0;
+    right: 1em;
 }
-#caja-apellido{
-    grid-area: apellido;
+
+.favorito img{
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 0.5em;
 }
-#caja-tipo{
-    grid-area: tipo;
-}
-#caja-num{
-    grid-area: numero;
-}
-#caja-f-nac{
-grid-area: fecha;
-}
-#caja-tel{
-    grid-area: tel;
-}
-#caja-email-sec{
-    grid-area: email-sec;
-}
-#nombre{
-    padding-right: 30px;
-}
-#apellido{
-    padding-right: 30px;
-}
-#tipo{
-    padding-right: 30px;
-}
-#documento{
-    padding-right: 30px;
-}
-#fecha{
-    padding-right: 30px;
-}
-#telefono{
-    padding-right: 30px;
-}
-#email-sec{
-    padding-right: 30px;
-}
+
 .btn{
- 
+  width: 20%; 
   padding: 0.75rem;
   background-color: var(--dark-color-acento-2); 
   border-radius: 4px;
@@ -93,4 +148,8 @@ grid-area: fecha;
   cursor: pointer;
   transition: background-color 0.3s ease;
   border: none;
+}
+.menu-lista .activo {
+  background-color: var(--dark-color-acento-2);
+  font-weight: bold;
 }
