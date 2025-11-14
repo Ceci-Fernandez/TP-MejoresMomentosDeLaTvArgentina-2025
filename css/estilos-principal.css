@@ -526,19 +526,7 @@ margin: 0;
   }
 
 /*footer-celu*/
-  .logo {
-    width: 8em;
-    height: 4em;
-  }
-
-  .icono-lupa {
-    display: none;
-  }
-
-  .boton-acceder {
-    padding: 0.4em;
-  }
-
+  
   .footer-principal {
     flex-direction: column;
     align-items: center;
