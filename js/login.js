@@ -74,8 +74,25 @@ contraseniaInput.addEventListener("blur", () => {
 });
 
 formulario.addEventListener("submit", (e) => {
-  if (sesionBtn.disabled) {
-    e.preventDefault();
-    return;
-  }
+  e.preventDefault();
+  validarLogin(correoInput.value , contraseniaInput.value);
 });
+
+function validarLogin(correo, contrasenia){
+  const correoGuardado = localStorage.getItem("correo"); //Despues corregir las key para que funcione bien
+  const contraseniaGuardada = localStorage.getItem("contrasenia");
+
+  if(correo === correoGuardado && contrasenia === contraseniaGuardada){
+      window.location.href = "/index.html";
+  }
+  else{
+    alert("Los datos ingresados son incorrectos.");
+  }
+}
+
+function probarLocalStorage(){
+  localStorage.setItem("correo", "a@a.com");
+  localStorage.setItem("contrasenia", "Melina2025#");
+}
+
+probarLocalStorage();
