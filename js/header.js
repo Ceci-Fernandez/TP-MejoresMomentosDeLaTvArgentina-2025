@@ -1,6 +1,10 @@
 //boton de acceder
 const btnAcceder = document.querySelector("#btnAcceder");
 
+btnAcceder.addEventListener("click", () =>{
+  window.location.href = "/html/login.html";
+})
+
 btnAcceder.addEventListener("mouseover", () => {
     btnAcceder.style.backgroundColor = "#00c46c";
 }); //al pasar el mouse 

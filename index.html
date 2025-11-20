@@ -14,15 +14,21 @@
 <body>
    <header id="encabezado-principal" class="encabezado-principal">
       <section id="section-encabezado-principal" class="section-encabezado-principal">
-         <div>
+         <div class="caja-logo">
             <img class="logo" src="assets/img/logo3.png" alt="img de logo">
          </div>
          <div id="buscador-header" class="caja-buscador-header">
             <span class="icono-lupa"><i class="fa-solid fa-magnifying-glass" style="color: #145222;"></i></span>
             <input type="text" id="buscador" placeholder="" class="buscador-header">
          </div>
-         <div>
-            <a class="boton-acceder" id="btnAcceder" href="/html/login.html">Accede</a>
+        <div id="seccion-logueado" class="seccion-iconos-header">
+            <h4 id="nombre-usuario-logueado"></h4>
+            <a class="elementos-header iconos-header" href="/html/datos-personales.html"><i class="fa-solid fa-user" style="color: #145222;"></i></a>
+            <a class="elementos-header iconos-header" href=""><i class="fa-solid fa-heart" style="color: #145222;"></i></a>
+            <button id="boton-cerrar-sesion" class="boton-cerrar-sesion elementos-header">Cerrar Sesion</button>
+         </div>
+         <div id="seccion-sin-loguear" class="seccion-login">
+            <button class="boton-acceder" id="btnAcceder">Accede</button>
          </div>
       </section>
    </header>
@@ -430,6 +436,7 @@
    <script type="module" src="js/index.js"></script>
    <script src="js/buscador.js"></script>
    <script src="/js/nav.js"></script>
+   <script src="./js/indexLogueado.js"></script>
 </body>
 
 </html>

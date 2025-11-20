@@ -78,21 +78,27 @@ formulario.addEventListener("submit", (e) => {
   validarLogin(correoInput.value , contraseniaInput.value);
 });
 
-function validarLogin(correo, contrasenia){
-  const correoGuardado = localStorage.getItem("correo"); //Despues corregir las key para que funcione bien
-  const contraseniaGuardada = localStorage.getItem("contrasenia");
+function validarLogin(correo, contrasenia){ //Despues corregir las key para que funcione bien con las que estan en el REGISTRAR
+  // const correoGuardado = localStorage.getItem("correo"); 
+  // const contraseniaGuardada = localStorage.getItem("contrasenia");
+  const usuarioRegistrado = JSON.parse(localStorage.getItem("usuarioRegistrado"));
 
-  if(correo === correoGuardado && contrasenia === contraseniaGuardada){
-      window.location.href = "/index.html";
+  if(correo === usuarioRegistrado.correo && contrasenia === usuarioRegistrado.contrasenia){
+    localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioRegistrado));
+    window.location.href = "/index.html";
+    
   }
   else{
     alert("Los datos ingresados son incorrectos.");
   }
 }
 
+//Para probar que la funcion validarLogin funcione correctamente
 function probarLocalStorage(){
-  localStorage.setItem("correo", "a@a.com");
-  localStorage.setItem("contrasenia", "Melina2025#");
+  const usuario = {correo: "a@a.com", contrasenia: "Melina2025#", nombre: "Melina"}
+  localStorage.setItem("usuarioRegistrado", JSON.stringify(usuario));
+  //localStorage.setItem("correo", "a@a.com");
+  //localStorage.setItem("contrasenia", "Melina2025#");
 }
 
 probarLocalStorage();
