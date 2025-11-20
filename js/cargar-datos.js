@@ -1,6 +1,6 @@
 ﻿import items from "../data/items.json" with { type: 'json' };
 import configuracion from "../config/configuracion.json" with { type: 'json' };
-import { refrescarDecoraciones, generadorDeEstrellas } from "../js/index.js"
+import { refrescarDecoraciones } from "../js/index.js"
 
 
 const tabCategoria1 = document.getElementById("tab-categoria-1");
