@@ -70,6 +70,7 @@ const detallePrograma = document.getElementById("detalle-programa");
 const detalleProtagonista = document.getElementById("detalle-protagonista");
 const detalleImpacto = document.getElementById("detalle-impacto");
 const detalleRating = document.getElementById("detalle-rating");
+const detalleHashtag= document.getElementById("detalle-hashTag")
 const videoPlayer = document.getElementById("video-player");
 const botonFavorito = document.getElementById("boton-favorito");
 
@@ -84,6 +85,8 @@ function mostrarPopup(item) {
   detallePrograma.innerHTML = `<strong>Programa/Canal:</strong> ${item["personalizado_2.Programa/Canal de emisión"] || ""}`;
   detalleProtagonista.innerHTML = `<strong>Protagonistas:</strong> ${item["personalizado_3.Protagonistas"] || ""}`;
   detalleImpacto.innerHTML = `<strong>Impacto/Popularidad:</strong> ${item["personalizado_4.Impacto/Popularidad"] || ""}`;
+  detalleHashtag.innerHTML=` ${item["personalizado_5.Hashtags"] || ""}`;
+
   detalleRating.innerHTML = `<strong>Puntuación:</strong> ${generadorDeEstrellas(item.Rating || 0)}`;
  
 
