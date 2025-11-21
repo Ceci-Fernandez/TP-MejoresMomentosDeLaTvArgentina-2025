@@ -13,6 +13,19 @@ document.addEventListener("DOMContentLoaded", function () {
   var btnGuardar = document.getElementById("btn-guardar");
   var emailSecundario = document.getElementById("email-secundario");
 
+  // Cargar datos del usuario desde localStorage si existen
+  var usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
+  if (usuarioLogueado) {
+    emailUsuario.value = usuarioLogueado.correo || "";
+    nombre.value = usuarioLogueado.nombre || "";
+    apellido.value = usuarioLogueado.apellido || "";
+    tipo.value = usuarioLogueado.tipo || "DNI";
+    documento.value = usuarioLogueado.documento || "";
+    fechaNacimiento.value = usuarioLogueado.fechaNacimiento || "";
+    telefono.value = usuarioLogueado.telefono || "";
+    emailSecundario.value = usuarioLogueado.emailSecundario || "";
+  }
+
   secciones[0].classList.add("activo");
   secciones[1].classList.add("hide");
   secciones[2].classList.add("hide");
@@ -142,6 +155,44 @@ document.addEventListener("DOMContentLoaded", function () {
   btnCambiar.disabled = true;
   btnGuardar.disabled = true;
 
+  // Cambiar email y contraseña en localStorage
+  btnCambiar.addEventListener("click", function (e) {
+    e.preventDefault();
+    
+    var usuarioActual = JSON.parse(localStorage.getItem("usuarioLogueado"));
+    if (usuarioActual) {
+      usuarioActual.correo = emailUsuario.value;
+      usuarioActual.contrasenia = passwordUsuario.value;
+      usuarioActual.fechaActualizacion = new Date().toISOString();
+      
+      localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioActual));
+      alert("Email y contraseña actualizados correctamente!");
+    }
+  });
+
+  // Guardar cambios en el localStorage cuando se hace clic en "Guardar cambios"
+  btnGuardar.addEventListener("click", function (e) {
+    e.preventDefault();
+    
+    var usuario = {
+      id: 1,
+      correo: emailUsuario.value,
+      nombre: nombre.value,
+      apellido: apellido.value,
+      tipo: tipo.value,
+      documento: documento.value,
+      fechaNacimiento: fechaNacimiento.value,
+      telefono: telefono.value,
+      emailSecundario: emailSecundario.value,
+      contrasenia: passwordUsuario.value,
+      logueado: true,
+      fechaActualizacion: new Date().toISOString()
+    };
+    
+    localStorage.setItem("usuarioLogueado", JSON.stringify(usuario));
+    alert("Datos guardados correctamente!");
+  });
+
   var style = document.createElement("style");
   style.textContent = `
     .menu-lista li.activo {
@@ -166,4 +217,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   `;
   document.head.appendChild(style);
+
 });
