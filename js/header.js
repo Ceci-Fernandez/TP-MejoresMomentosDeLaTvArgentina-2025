@@ -73,7 +73,14 @@ const imgLista = [
   "assets/img/me-gusta-el-arte.jpeg",
   "assets/img/maniobra-hemlichpng.webp",
   "assets/img/mi familia es jurio.webp",
-  "assets/img/no se inunda.gif"
+  "assets/img/no se inunda.gif",
+  "/assets/img/ahi lo tenes al pelotudo.webp",
+  "/assets/img/chau y hasta nunca.jpg",
+  "/assets/img/uuh pepitas.jpeg",
+  "/assets/img/bandera arg.jpg",
+  "/assets/img/era una broma.jpg",
+  "/assets/img/25 de mayo.jpg",
+  "/assets/img/este pais se va a la mierda.webp",
 ];
 
 const img = [];
