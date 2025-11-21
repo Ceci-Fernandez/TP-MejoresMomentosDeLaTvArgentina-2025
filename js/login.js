@@ -74,8 +74,31 @@ contraseniaInput.addEventListener("blur", () => {
 });
 
 formulario.addEventListener("submit", (e) => {
-  if (sesionBtn.disabled) {
-    e.preventDefault();
-    return;
-  }
+  e.preventDefault();
+  validarLogin(correoInput.value , contraseniaInput.value);
 });
+
+function validarLogin(correo, contrasenia){ //Despues corregir las key para que funcione bien con las que estan en el REGISTRAR
+  // const correoGuardado = localStorage.getItem("correo"); 
+  // const contraseniaGuardada = localStorage.getItem("contrasenia");
+  const usuarioRegistrado = JSON.parse(localStorage.getItem("usuarioRegistrado"));
+
+  if(correo === usuarioRegistrado.correo && contrasenia === usuarioRegistrado.contrasenia){
+    localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioRegistrado));
+    window.location.href = "/index.html";
+    
+  }
+  else{
+    alert("Los datos ingresados son incorrectos.");
+  }
+}
+
+//Para probar que la funcion validarLogin funcione correctamente
+function probarLocalStorage(){
+  const usuario = {correo: "a@a.com", contrasenia: "Melina2025#", nombre: "Melina"}
+  localStorage.setItem("usuarioRegistrado", JSON.stringify(usuario));
+  //localStorage.setItem("correo", "a@a.com");
+  //localStorage.setItem("contrasenia", "Melina2025#");
+}
+
+probarLocalStorage();
