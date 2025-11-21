@@ -112,6 +112,7 @@ padding: 0;
 margin-bottom: 1em;
 }
 
+
 @media screen and (max-width: 768px) {
     .logo{
     width: 8em;
