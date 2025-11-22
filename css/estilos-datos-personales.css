@@ -1,5 +1,9 @@
 ﻿/* estilos-datos-personales.css */
 @import url(temas-colores-fuentes.css);
+
+body{
+
+}
 .nav a{
     display: flex;
     justify-content:flex-start;
@@ -45,7 +49,7 @@
 }
 
 .container-datos{
-    height: 100vh;
+    min-height: 100vh; ;
     display: flex;
     margin: 0;
 
@@ -66,11 +70,13 @@
   padding: 1em;
 }
 .contenedor-favoritos{
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-width: 100%;
-gap: 1em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1400px;
 }
+
 .opcion-menu-content input, .opcion-menu-content select{
     width: 60%;
     padding: 1em;
@@ -123,12 +129,12 @@ position: relative;
     right: 1em;
 }
 
-.favorito img{
+.favorito img {
   width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+  height: 200px;       
+  object-fit: cover;  
   border-radius: 0.5em;
+  display: block;
 }
 
 .btn{
@@ -146,6 +152,29 @@ position: relative;
   background-color: var(--dark-color-acento-2);
   font-weight: bold;
 }
+
+/*estilos de favoritos*/
+.btn-quitar {
+  padding: 0.4em 0.8em;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.btn-quitar:hover {
+  background-color: #c9302c;
+}
+
+.btn-quitar:active {
+  background-color: #b52b27;
+  transform: scale(0.97);
+}
+
 
 @media (min-device-width: 481px) and (max-device-width: 768px) { 
    .logo{
@@ -191,6 +220,22 @@ position: relative;
   .logos_redes {
     justify-content: center;
   }
+
+ .contenedor-favoritos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .favorito img {
+    border-radius: 0.4em;
+  }
+
+  .btn-quitar {
+    padding: 0.4em 0.6em;
+    font-size: 0.85rem;
+  }
+
 }
 @media (max-width: 480px) {
   .logo {
@@ -214,7 +259,28 @@ position: relative;
     background-color: #F2F3F3;
 }
 
+ .contenedor-favoritos {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
 
+  .favorito {
+    width: 100%;
+  }
+
+  .favorito img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.4em;
+  }
+
+  .btn-quitar {
+    width: 100%;
+    padding: 0.6em;
+    font-size: 1rem;
+    margin-top: 0.5em;
+  }
 /*footer-celu*/
   
   .footer-principal {
