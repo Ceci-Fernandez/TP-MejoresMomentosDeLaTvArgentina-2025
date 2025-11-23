@@ -57,6 +57,7 @@ function validarCampoVacio(input) {
     mostrarErrorDebajo(input, "Este campo es obligatorio");
     return false;
   }
+
   limpiarError(input);
   return true;
 }
@@ -70,6 +71,7 @@ function validarTodo() {
     contrasenia.value.trim(),
     confirmacionContrasenia.value.trim()
   );
+
   const checkOk = checkCondiciones.checked;
 
   if (email.value.trim() !== "" && !emailOk) {
@@ -125,6 +127,19 @@ formulario.addEventListener("submit", (e) => {
   validarTodo();
 
   if (!botonRegistrar.disabled) {
+
+    //Datos guardados en localStorage
+
+    const usuarioRegistrado = {
+      nombre: nombre.value.trim(),
+      email: email.value.trim(),
+      contrasenia: contrasenia.value.trim(),
+      
+    };
+
+    localStorage.setItem("usuario", JSON.stringify(usuarioRegistrado));
+
+
     alert("Registro exitoso");
 
     formulario.reset();
