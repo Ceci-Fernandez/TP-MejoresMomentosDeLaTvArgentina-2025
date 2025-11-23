@@ -1,4 +1,4 @@
-const formulario = document.getElementById("formulario-login");
+const formularioLogin = document.getElementById("login-formulario");
 const correoInput = document.getElementById("correo");
 const contraseniaInput = document.getElementById("contrasenia");
 const sesionBtn = document.getElementById("sesionBtn");
@@ -73,7 +73,7 @@ contraseniaInput.addEventListener("blur", () => {
   );
 });
 
-formulario.addEventListener("submit", (e) => {
+formularioLogin.addEventListener("submit", (e) => {
   e.preventDefault();
   validarLogin(correoInput.value , contraseniaInput.value);
 });
@@ -83,7 +83,7 @@ function validarLogin(correo, contrasenia){ //Despues corregir las key para que 
   // const contraseniaGuardada = localStorage.getItem("contrasenia");
   const usuarioRegistrado = JSON.parse(localStorage.getItem("usuarioRegistrado"));
 
-  if(correo === usuarioRegistrado.correo && contrasenia === usuarioRegistrado.contrasenia){
+  if(correo === usuarioRegistrado.email && contrasenia === usuarioRegistrado.contrasenia){
     localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioRegistrado));
     window.location.href = "/index.html";
     
@@ -92,7 +92,7 @@ function validarLogin(correo, contrasenia){ //Despues corregir las key para que 
     alert("Los datos ingresados son incorrectos.");
   }
 }
-
+/*
 //Para probar que la funcion validarLogin funcione correctamente
 function probarLocalStorage(){
   const usuario = {correo: "a@a.com", contrasenia: "Melina2025#", nombre: "Melina"}
@@ -101,4 +101,4 @@ function probarLocalStorage(){
   //localStorage.setItem("contrasenia", "Melina2025#");
 }
 
-probarLocalStorage();
+probarLocalStorage();*/
