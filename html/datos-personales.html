@@ -89,7 +89,7 @@
 
     <div class="opcion-menu" id="favoritos-menu">
       <h2>Mis Favoritos</h2>
-      <div class="contenedor-favoritos" id="contenedor-favoritos">
+      <div class="contenedor-favoritos" id="contenedor-favoritos"></div>
 
       </div>
   </main>
@@ -131,6 +131,26 @@
     <p class="copyright">&copy; 2025 Momentos de la TV Argentina. UNLaM.Todos los derechos reservados.</p>
 
   </footer>
+  <div class="pop-up-item oculto" id="pop-up-item">
+      <div class="contenedor-item">
+         <span class="cerrar-pop" id="cerrar-pop">&times;</span>
+         <h1 class="nombre-item" id="nombre-item">Titulo-Nombre</h1>
+         <p class="categoria-item" id="categoria-item">categoria</p>
+         <div class="video-item" id="video-item">
+            <iframe id="video-player" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+         </div>
+         <h2>Descripcion</h2>
+         <p class="descripcion-texto" id="descriocion-texto"></p>
+         <h3>Detalles</h3>
+         <p class="detalle-item" id="detalle-fecha">Fecha/año</p>
+         <p class="detalle-item" id="detalle-programa">Programa/Canal</p>
+         <p class="detalle-item" id="detalle-protagonista">Protagonistas</p>
+         <p class="detalle-item" id="detalle-impacto">Impacto/Popularidad</p>
+         <p class="detalle-item" id="detalle-rating">Puntuación <span id="estrella">5</span></p>
+         <p class="detalle-item" id="detalle-hashTag"></p>
+           <button id="boton-favorito" class="boton-favorito">Agregar a favoritos</button>
+      </div>
+   </div>
   <script type="module" src="/js/favoritos.js"></script>
 
 </body>

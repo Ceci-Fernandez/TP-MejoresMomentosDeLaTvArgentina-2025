@@ -1,5 +1,6 @@
 
 import items from "/data/items.json" with { type: "json" }
+import { mostrarPopup } from "./popUp.js"
 
 
 
