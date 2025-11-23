@@ -10,7 +10,7 @@ body {
     max-width: 15em;
     margin: 6em auto;
     padding: 2rem;
-    background-color: var(--light-color-texto);
+    background-color: white;
     color: var(--light-color-acento-2);
     border-radius: 8px;
     font-family: 'Muli', sans-serif;
