@@ -7,13 +7,12 @@ main{
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
   background-color: var(--light-color-fondo2);
 }
 
 .formulario-registro{
-    max-width: 25em;
-    width: 90%;
+    max-width: 20em;
+    
     margin: 6em auto;
     padding: 2rem;
     background-color: var(--light-color-texto);
@@ -138,18 +137,26 @@ color: var(--light-color-acento-2);
 @media (max-width: 768px) {
 
   .formulario-registro {
-    padding: 1.8rem;
-    
+    max-width: 20em;
+    padding: 1.5rem;
   }
-  
-}
 
+}
 
 @media (max-width: 480px) {
 
   .formulario-registro {
-    padding: 1.rem;
-    width: 80%;
+    max-width: 18em;
+    padding: 1.2rem;
   }
-  
+
+
+  .formulario-registro input {
+    width: 95%;
+    font-size: 0.9rem;
+    
+  }
+
+
+
 }
