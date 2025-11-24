@@ -168,10 +168,13 @@ position: relative;
     border-radius: 0.4em;
   }
 
-  
+  .btn-quitar {
+    padding: 0.4em 0.6em;
+    font-size: 0.85rem;
+  }
 
 }
-@media (min-device-width: 319px) and (max-device-width: 481px) {
+@media (max-width: 480px) {
   
  .menu-lista h1{
     font-size: 1.2em;
@@ -193,11 +196,14 @@ position: relative;
     border-radius: 0.4em;
   }
 
-  .btn{
-    width: 70%;
+  .btn-quitar {
+    width: 100%;
     padding: 0.6em;
     font-size: 1rem;
     margin-top: 0.5em;
   }
-  
+  #btn-cambiar{
+  width: 70%;
+  }
+
 }
