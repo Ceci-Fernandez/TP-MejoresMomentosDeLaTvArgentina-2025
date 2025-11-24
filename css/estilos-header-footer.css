@@ -178,6 +178,19 @@ margin: 0;
   font-size: 1em;
 }
 
+.nombre-usuario-logueado{ /* estoo*/
+  font-size: .8em;
+}
+
+.elementos-header{ /*toque esto*/
+  font-size: 1.5em;
+
+}
+
+.boton-cerrar-sesion { /*yesto*/
+  font-size: .9em;
+}
+
 
  .footer-principal {
     flex-direction: column;
@@ -205,9 +218,28 @@ margin: 0;
 
 @media (max-width: 480px) {
   .logo {
-    width: 6em;
-    height: 3em;
+    width: 8em;
+    height: 4em;
   }
+
+  .caja-logo {
+    width: 27.5%;
+}
+
+.caja-buscador-header {
+    display: flex;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.seccion-iconos-header {
+    width: 37.5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
 
   .icono-lupa{
     display: none;
@@ -220,23 +252,23 @@ margin: 0;
   .buscador-header {
     border-radius: 1em;
     width: 100%;
-    padding: 0.10em;
+    padding: .50em;
     border-color: gray;
     background-color: #F2F3F3;
 }
 
-.nombre-usuario-logueado{
-  font-size: .5em;
+.nombre-usuario-logueado{ /* estoo*/
+  font-size: .8em;
 }
 
-.elementos-header{
-  font-size: 1em;
+.elementos-header{ /*toque esto*/
+  font-size: 1.5em;
 
 }
 
-.boton-cerrar-sesion{
-  font-size: .4em;
-}
+.boton-cerrar-sesion { /*yesto*/
+        font-size: .8em;
+    }
 
 /*footer-celu*/
   
