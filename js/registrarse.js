@@ -1,4 +1,4 @@
-const formulario = document.getElementById("registro-formulario");
+const formularioRegistro = document.getElementById("registro-formulario");
 
 const nombre = document.getElementById("usuario");
 const email = document.getElementById("email");
@@ -57,6 +57,7 @@ function validarCampoVacio(input) {
     mostrarErrorDebajo(input, "Este campo es obligatorio");
     return false;
   }
+
   limpiarError(input);
   return true;
 }
@@ -70,6 +71,7 @@ function validarTodo() {
     contrasenia.value.trim(),
     confirmacionContrasenia.value.trim()
   );
+
   const checkOk = checkCondiciones.checked;
 
   if (email.value.trim() !== "" && !emailOk) {
@@ -119,15 +121,28 @@ function validarTodo() {
 checkCondiciones.addEventListener("change", validarTodo);
 
 
-formulario.addEventListener("submit", (e) => {
+formularioRegistro.addEventListener("submit", (e) => {
   e.preventDefault();
 
   validarTodo();
 
   if (!botonRegistrar.disabled) {
+
+    //Datos guardados en localStorage
+
+    const usuarioRegistrado = {
+      nombre: nombre.value.trim(),
+      email: email.value.trim(),
+      contrasenia: contrasenia.value.trim(),
+      
+    };
+
+    localStorage.setItem("usuarioRegistrado", JSON.stringify(usuarioRegistrado));
+
+
     alert("Registro exitoso");
 
-    formulario.reset();
+    formularioRegistro.reset();
     botonRegistrar.disabled = true;
     
 

@@ -1,3 +1,5 @@
+import { renderFavoritosPerfil } from "./favoritos.js";
+
 document.addEventListener("DOMContentLoaded", function () {
   var menuLinks = document.querySelectorAll(".menu-lista li");
   var secciones = document.querySelectorAll(".opcion-menu");
@@ -217,5 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   `;
   document.head.appendChild(style);
+
+  renderFavoritosPerfil();
 
 });
