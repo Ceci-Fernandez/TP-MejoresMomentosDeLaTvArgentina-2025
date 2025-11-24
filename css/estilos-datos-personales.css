@@ -176,8 +176,12 @@ position: relative;
 }
 @media (max-width: 480px) {
   
+
  .menu-lista h1{
     font-size: 1.2em;
+  }
+  .menu-lista{
+    font-size: 0.7em;
   }
 
  .contenedor-favoritos {
@@ -205,5 +209,7 @@ position: relative;
   #btn-cambiar{
   width: 70%;
   }
-
+  #btn-guardar{
+  width: 70%;
+  }
 }
