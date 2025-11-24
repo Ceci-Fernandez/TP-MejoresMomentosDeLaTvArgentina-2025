@@ -197,6 +197,7 @@ margin: 0;
     align-items: center;
     text-align: center;
     gap: 1.5em; 
+    padding-right: 6em;
   }
 
   .container-columnas-footer {
