@@ -4,6 +4,9 @@ import { toggleFavorito, aplicarFavoritos, renderFavoritosPerfil } from "./favor
 import { mostrarPopup } from "./popUp.js";
 
 
+
+/*generador de estrellas dinamicas*/
+
 export function generadorDeEstrellas(rating) {
   rating = Number.parseInt(rating);
   let estrellas = "";
@@ -17,6 +20,17 @@ export function generadorDeEstrellas(rating) {
   `;
 }
 
+export function insertarEstrellas() {
+  const elementosRating = document.querySelectorAll(".item-valor-rating");
+  elementosRating.forEach((elemento, index) => {
+    const item = items[index];
+    if (item && item.Rating) {
+      elemento.innerHTML = generadorDeEstrellas(item.Rating);
+    }
+  });
+}
+
+/*Generador de corazones dinamicos*/
 export function insertarCorazones() {
   document.querySelectorAll(".acciones-articulo").forEach((bloque) => {
     const corazon = bloque.querySelector(".corazon");
@@ -35,15 +49,6 @@ export function insertarCorazones() {
   });
 }
 
-export function insertarEstrellas() {
-  const elementosRating = document.querySelectorAll(".item-valor-rating");
-  elementosRating.forEach((elemento, index) => {
-    const item = items[index];
-    if (item && item.Rating) {
-      elemento.innerHTML = generadorDeEstrellas(item.Rating);
-    }
-  });
-}
 
 export function refrescarDecoraciones() {
   insertarCorazones();
@@ -59,14 +64,14 @@ document.addEventListener("DOMContentLoaded", () => {
   contenedor.addEventListener("mouseover", (e) => {
     const art = e.target.closest(".articulo-categoria");
     if (!art) return;
-    const idCategoria = art.id.split("_")[0];
+    const idCategoria = art.id.split("-")[0];
     art.classList.add(`hover-${idCategoria}`);
   });
 
   contenedor.addEventListener("mouseout", (e) => {
     const art = e.target.closest(".articulo-categoria");
     if (!art) return;
-    const idCategoria = art.id.split("_")[0];
+    const idCategoria = art.id.split("-")[0];
     art.classList.remove(`hover-${idCategoria}`);
   });
 
@@ -83,6 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const id = articulo.id;
     const item = items.find((i) => i.Id === id);
     if (!item) return;
+
+
 
     mostrarPopup(item);
   });
