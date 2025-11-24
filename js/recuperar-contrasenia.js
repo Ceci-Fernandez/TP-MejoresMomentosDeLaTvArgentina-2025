@@ -74,6 +74,16 @@ document.addEventListener("DOMContentLoaded", () => {
             errorCaptcha.textContent = "";
             captchaCheck.classList.remove("input-error");
         }
+
+        const usuarioGuardado = JSON.parse(localStorage.getItem("usuarioRegistrado"));
+        const existeCorreo = usuarioGuardado && usuarioGuardado.email === emailVal;
+
+        if (!existeCorreo) {
+            errorEmail.textContent = "Ese correo no está registrado.";
+            email.classList.add("input-error");
+            hayError = true;
+        }
+
         function limpiarFormulario() {
             email.value = "";
             captchaCheck.checked = false;
