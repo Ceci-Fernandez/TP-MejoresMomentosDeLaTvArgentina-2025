@@ -1,4 +1,4 @@
-const formulario = document.getElementById("registro-formulario");
+const formularioRegistro = document.getElementById("registro-formulario");
 
 const nombre = document.getElementById("usuario");
 const email = document.getElementById("email");
@@ -121,7 +121,7 @@ function validarTodo() {
 checkCondiciones.addEventListener("change", validarTodo);
 
 
-formulario.addEventListener("submit", (e) => {
+formularioRegistro.addEventListener("submit", (e) => {
   e.preventDefault();
 
   validarTodo();
@@ -137,12 +137,12 @@ formulario.addEventListener("submit", (e) => {
       
     };
 
-    localStorage.setItem("usuario", JSON.stringify(usuarioRegistrado));
+    localStorage.setItem("usuarioRegistrado", JSON.stringify(usuarioRegistrado));
 
 
     alert("Registro exitoso");
 
-    formulario.reset();
+    formularioRegistro.reset();
     botonRegistrar.disabled = true;
     
 

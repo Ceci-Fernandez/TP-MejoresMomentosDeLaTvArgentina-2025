@@ -27,6 +27,10 @@ a{
    height: 5em;
 }
 
+.caja-logo{
+  width: 37.5%;
+}
+
 .section-encabezado-principal{
    display: flex;
    justify-content: space-between;
@@ -56,44 +60,63 @@ a{
 }
 
 .boton-acceder{
-    padding: 0.70em;
+    padding: 0.90em;
+    font-size: 1em;
     border-radius: 2.5em;
     background: #145222;
     margin-right: 2em;
     font-weight: 600;
+    font-family: 'Muli', sans-serif;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
-.img-carrousel{
-   height: 50vh;
+.boton-cerrar-sesion{
+    padding: 0.70em;
+    font-size: 1em;
+    border-radius: 2.5em;
+    background: #145222;
+    margin-right: 1em;
+    font-weight: 600;
+    font-family: 'Muli', sans-serif;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
-.contenido-carrousel{
-   display: flex;
-   justify-content: center;
-   align-items: center;
+.invisible{
+  display: none;
 }
 
-.boton-carrousel{
-  margin-left: 1em;
-  margin-right: 1em;
-  font-size: 2em;
+.seccion-iconos-header{
+  width: 37.5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
 }
 
-.circulo-carrousel-general{
-   margin: 1em 0em;
-   display: flex;
-   justify-content: center;
+.seccion-login{
+  width: 37.5%;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.circulo-carrousel{
-   padding: 3px;
+.iconos-header{
+  font-size: 1.4em;
 }
 
- .container-columnas-footer{
+.elementos-header{
+  margin-left: .5em;
+}
+
+  .container-columnas-footer{
    display: grid;
    grid-template-columns: repeat(3,1fr);
    padding: 2em;
-   gap : 12em; 
+   padding-left: 6em;
+   gap: 12em;
 }
 
 .footer-principal{
@@ -103,9 +126,10 @@ a{
   flex-direction: column;
 
 }
-.columna-footer {
-  display: flex;
-  flex-direction: column;
+
+.columna-footer{
+ display: flex;
+ flex-direction: column;
 }
 
 .logos_redes{
@@ -125,10 +149,11 @@ a{
 
 .copyright{
 text-align: center;
-background-color: var(--dark-color-acento-3);
+background-color: var(--dark-color-acento-1);
 width: 100%;
 margin: 0;
 }
+
 .columna-footer h4{
    font-size: 1.3em;
 }
@@ -137,34 +162,78 @@ margin: 0;
    color: var(--dark-color-acento-2);
 }
 
+
 @media (max-width: 768px) {
-  .logo{
-    width: 8em;
-    height: 4em;
+  .boton-acceder {
+    padding: 0.5em;
+  }
+.nombre-usuario-logueado{
+  font-size: .8em;
+}
+
+.elementos-header{
+  font-size: .8em;
+}
+
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 6em;
+    height: 3em;
   }
 
-  
+  .icono-lupa{
+    display: none;
+  }
 
+  .boton-acceder{
+    font-size: small;
+  }
+
+  .buscador-header {
+    border-radius: 1em;
+    width: 100%;
+    padding: 0.10em;
+    border-color: gray;
+    background-color: #F2F3F3;
+}
+
+.nombre-usuario-logueado{
+  font-size: .5em;
+}
+
+.elementos-header{
+  font-size: .5em;
+}
+
+.boton-cerrar-sesion{
+  font-size: .4em;
+}
+
+/*footer-celu*/
+  
   .footer-principal {
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 1.5em; 
   }
-  .container-columnas-footer{
+
+  .container-columnas-footer {
     display: flex;
     flex-direction: column;
     gap: 1em;
   }
- 
 
   .columna-footer {
     width: 100%;
-    align-items: left;
-    
+    align-items: center;
   }
 
   .logos_redes {
     justify-content: center;
   }
+
+
 }

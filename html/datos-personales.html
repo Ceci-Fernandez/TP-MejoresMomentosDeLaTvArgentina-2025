@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="/css/estilos-datos-personales.css">
   <link rel="stylesheet" href="/css/temas-colores-fuentes.css">
   <link rel="stylesheet" href="/css/estilos-principal.css">
+  <link rel="stylesheet" href="../css/estilos-header-footer.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <script type="module" src="../js/datos-personales.js"></script>
   <title>Mi Perfil</title>
@@ -14,18 +15,22 @@
 
 <body>
   <header id="encabezado-principal" class="encabezado-principal">
-    <section id="section-encabezado-principal" class="section-encabezado-principal">
-      <div>
-        <a href="/index.html"><img class="logo" src="../assets/img/logo3.png" alt="img de logo"></a>
-      </div>
-      <div id="buscador-header" class="caja-buscador-header">
-        <span class="icono-lupa"><i class="fa-solid fa-magnifying-glass" style="color: #145222;"></i></span>
-        <input type="text" id="buscador" placeholder="" class="buscador-header">
-      </div>
-      <div>
-      </div>
-    </section>
-  </header>
+      <section id="section-encabezado-principal" class="section-encabezado-principal">
+         <div class="caja-logo">
+            <img class="logo" src="/assets/img/logo3.png" alt="img de logo" >
+         </div>
+         <div id="buscador-header" class="caja-buscador-header">
+            <span class="icono-lupa"><i class="fa-solid fa-magnifying-glass" style="color: #145222;"></i></span>
+            <input type="text" id="buscador" placeholder="" class="buscador-header">
+         </div>
+        <div id="seccion-logueado" class="seccion-iconos-header">
+            <h4 id="nombre-usuario-logueado" class="nombre-usuario-logueado"></h4>
+            <a class="elementos-header iconos-header" href="/html/datos-personales.html"><i class="fa-solid fa-user" style="color: #145222;"></i></a>
+            <a class="elementos-header iconos-header" href=""><i class="fa-solid fa-heart" style="color: #145222;"></i></a>
+            <button id="boton-cerrar-sesion" class="boton-cerrar-sesion elementos-header">Cerrar Sesion</button>
+         </div>
+      </section>
+   </header>
 
 
 

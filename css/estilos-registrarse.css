@@ -8,7 +8,7 @@ main{
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-color: var(--light-color-fondo);
+  background-color: var(--light-color-fondo2);
 }
 
 .formulario-registro{
@@ -34,12 +34,12 @@ main{
 }
 
 .registro-titulo a{
-  color:var(--dark-color-acento-1);
-  text-decoration: none;
+    text-decoration: none;
+    color: #0f3e1b;
 }
 
 .registro-titulo a:hover{
-  color: var(--dark-color-acento-3);
+  text-decoration: underline;
 }
 
 .acceso-link{
@@ -76,7 +76,7 @@ input[type="checkbox"]{
 
 .btn-registrar{
   padding: 0.75rem;
-  background-color: var(--dark-color-acento-2); 
+  background-color: var(--light-color-acento-3); 
   border-radius: 4px;
   color: var(--light-color-texto);
   font-weight: bold;
@@ -85,7 +85,7 @@ input[type="checkbox"]{
 }
 
 .btn-registrar:hover {
-  background-color: var(--light-color-acento-3);
+  background-color: #0f3e1b;
 }
 
 .contenedor-checkbox{
@@ -104,9 +104,7 @@ input[type="checkbox"]{
 .contenedor-checkbox label {
    margin-bottom: 0;
     font-size:12px;
-}
-
-.tieneCuenta a, .contenedor-checkbox a {
+}.tieneCuenta, .contenedor-checkbox a {
 color: var(--light-color-acento-2);
 }
 
@@ -127,6 +125,11 @@ color: var(--light-color-acento-2);
   opacity: 0.6;
 }
 
+.iniciar-sesion{
+  text-decoration: none;
+    color: #0f3e1b;
+    text-decoration: underline;
+}
 
 @media (max-width: 900px) {
   main {
