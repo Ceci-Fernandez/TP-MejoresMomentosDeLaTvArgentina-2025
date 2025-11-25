@@ -13,19 +13,21 @@ document.addEventListener("DOMContentLoaded", function () {
   var fechaNacimiento = document.getElementById("fecha-nacimiento");
   var telefono = document.getElementById("telefono");
   var btnGuardar = document.getElementById("btn-guardar");
-  var emailSecundario = document.getElementById("email-secundario");
+  var btnCerrarSesion = document.getElementById("boton-cerrar-sesion");
+  var nombreUsuarioLogueado = document.getElementById("nombre-usuario-logueado");
 
   // Cargar datos del usuario desde localStorage si existen
   var usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
   if (usuarioLogueado) {
     emailUsuario.value = usuarioLogueado.correo || "";
+    passwordUsuario.value = usuarioLogueado.contrasenia || "";
     nombre.value = usuarioLogueado.nombre || "";
     apellido.value = usuarioLogueado.apellido || "";
     tipo.value = usuarioLogueado.tipo || "DNI";
     documento.value = usuarioLogueado.documento || "";
     fechaNacimiento.value = usuarioLogueado.fechaNacimiento || "";
     telefono.value = usuarioLogueado.telefono || "";
-    emailSecundario.value = usuarioLogueado.emailSecundario || "";
+    nombreUsuarioLogueado.textContent = usuarioLogueado.nombre || "";
   }
 
   secciones[0].classList.add("activo");
@@ -131,7 +133,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var docValido = soloNumeros(documento.value);
     var edadValida = validarEdad(fechaNacimiento.value);
     var telValido = validarTelefono(telefono.value);
-    var emailValido = validarEmail(emailSecundario.value);
 
     mostrarError(nombre, nombreValido ? "" : "Solo letras, espacios o guiones.");
     mostrarError(apellido, apellidoValido ? "" : "Solo letras, espacios o guiones.");
@@ -139,9 +140,8 @@ document.addEventListener("DOMContentLoaded", function () {
     mostrarError(documento, docValido ? "" : "Solo números.");
     mostrarError(fechaNacimiento, edadValida ? "" : "Debe tener al menos 16 años.");
     mostrarError(telefono, telValido ? "" : "Formato inválido.");
-    mostrarError(emailSecundario, emailValido ? "" : "Email inválido");
 
-    btnGuardar.disabled = !(nombreValido && apellidoValido && tipoValido && docValido && edadValida && telValido && emailValido);
+    btnGuardar.disabled = !(nombreValido && apellidoValido && tipoValido && docValido && edadValida && telValido);
   }
 
   emailUsuario.addEventListener("input", validarMiUsuario);
@@ -152,7 +152,6 @@ document.addEventListener("DOMContentLoaded", function () {
   documento.addEventListener("input", validarDatosPersonales);
   fechaNacimiento.addEventListener("input", validarDatosPersonales);
   telefono.addEventListener("input", validarDatosPersonales);
-  emailSecundario.addEventListener("input", validarDatosPersonales);
 
   btnCambiar.disabled = true;
   btnGuardar.disabled = true;
@@ -168,6 +167,15 @@ document.addEventListener("DOMContentLoaded", function () {
       usuarioActual.fechaActualizacion = new Date().toISOString();
       
       localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioActual));
+      
+      // También actualizar usuarioRegistrado para que el login funcione con los nuevos datos
+      var usuarioRegistrado = JSON.parse(localStorage.getItem("usuarioRegistrado"));
+      if (usuarioRegistrado) {
+        usuarioRegistrado.correo = emailUsuario.value;
+        usuarioRegistrado.contrasenia = passwordUsuario.value;
+        localStorage.setItem("usuarioRegistrado", JSON.stringify(usuarioRegistrado));
+      }
+      
       alert("Email y contraseña actualizados correctamente!");
     }
   });
@@ -185,7 +193,6 @@ document.addEventListener("DOMContentLoaded", function () {
       documento: documento.value,
       fechaNacimiento: fechaNacimiento.value,
       telefono: telefono.value,
-      emailSecundario: emailSecundario.value,
       contrasenia: passwordUsuario.value,
       logueado: true,
       fechaActualizacion: new Date().toISOString()
@@ -219,6 +226,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   `;
   document.head.appendChild(style);
+
+  // Cerrar sesión - borrar datos del localStorage
+  btnCerrarSesion.addEventListener("click", function (e) {
+    e.preventDefault();
+    localStorage.removeItem("usuarioLogueado");
+    alert("Sesión cerrada correctamente!");
+    window.location.href = "/index.html";
+  });
 
   renderFavoritosPerfil();
 
