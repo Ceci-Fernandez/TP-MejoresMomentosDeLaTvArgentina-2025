@@ -117,6 +117,7 @@ a{
    grid-template-columns: repeat(3,1fr);
    padding: 2em;
    gap: 12em;
+   justify-items: center;
 }
 
 .footer-principal{
@@ -124,7 +125,6 @@ a{
   color: var(--light-color-texto);
   display: flex;
   flex-direction: column;
-
 }
 
 .columna-footer{
@@ -178,28 +178,27 @@ margin: 0;
   font-size: 1em;
 }
 
-.nombre-usuario-logueado{ /* estoo*/
+.nombre-usuario-logueado{ 
   font-size: .8em;
 }
 
-.elementos-header{ /*toque esto*/
+.elementos-header{ 
   font-size: 1.5em;
 
 }
 
-.boton-cerrar-sesion { /*yesto*/
+.boton-cerrar-sesion { 
   font-size: .9em;
 }
 
-
- .footer-principal {
+.footer-principal {
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 1.5em;
-  }
+}
 
-  .container-columnas-footer {
+.container-columnas-footer {
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -284,9 +283,8 @@ margin: 0;
 
 .boton-acceder.btn-sinloguear{
   font-size: medium;*/
-}
 
-/*footer-celu*/
+  /*footer-celu*/
   
   .footer-principal {
     flex-direction: column;
@@ -309,3 +307,5 @@ margin: 0;
   .logos_redes {
     justify-content: center;
   }
+}
+
