@@ -111,6 +111,7 @@ a{
   margin-left: .5em;
 }
 
+
   .container-columnas-footer{
    display: grid;
    grid-template-columns: repeat(3,1fr);
@@ -256,18 +257,34 @@ margin: 0;
     background-color: #F2F3F3;
 }
 
-.nombre-usuario-logueado{ /* estoo*/
+.nombre-usuario-logueado{ 
   font-size: .8em;
 }
 
-.elementos-header{ /*toque esto*/
+.elementos-header{ 
   font-size: 1.5em;
 
 }
 
-.boton-cerrar-sesion { /*yesto*/
+.boton-cerrar-sesion { 
         font-size: .8em;
-    }
+}
+
+/*.caja-logo.caja-logo-sinloguear{
+  width: 40%;
+}
+
+.caja-buscador-header.buscador-sinloguear{
+  width: 30%;
+}
+
+.seccion-login.sin-loguear{
+  width: 40%;
+}
+
+.boton-acceder.btn-sinloguear{
+  font-size: medium;*/
+}
 
 /*footer-celu*/
   
@@ -292,6 +309,3 @@ margin: 0;
   .logos_redes {
     justify-content: center;
   }
-
-
-}
