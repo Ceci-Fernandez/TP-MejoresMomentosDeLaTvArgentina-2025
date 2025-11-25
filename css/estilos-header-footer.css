@@ -55,8 +55,12 @@ a{
 
 .icono-lupa{
    position: absolute;
-   left: 12px;
-   bottom: 6px;
+  left: 12px;
+  top: 50%;              
+  transform: translateY(-50%);
+  color: #145222;
+
+
 }
 
 .boton-acceder{
@@ -70,6 +74,10 @@ a{
     border: none;
     color: white;
     cursor: pointer;
+
+
+
+
 }
 
 .boton-cerrar-sesion{
@@ -176,6 +184,8 @@ margin: 0;
 }
 .iconos-header{
   font-size: 1em;
+  color:#145222;
+  margin: .3em;
 }
 
 .nombre-usuario-logueado{ 
@@ -232,6 +242,10 @@ margin: 0;
     align-items: center;
     position: relative;
 }
+  input, select {
+    width: 100%;
+    padding: 0.5em;
+  }
 
 .seccion-iconos-header {
     width: 37.5%;

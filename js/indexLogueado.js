@@ -4,15 +4,20 @@ const nombreUsuarioLogueado = document.getElementById("nombre-usuario-logueado")
 const btnCerrarSesion = document.getElementById("boton-cerrar-sesion");
 
 window.addEventListener("load", () => {
-const usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado")); 
+    const usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
 
-    if(usuarioLogueado){
+    if (usuarioLogueado) {
         seccionSinLoguear.classList.remove("seccion-login");
         seccionSinLoguear.classList.add("invisible");
         nombreUsuarioLogueado.textContent = "Bienvenido: " + usuarioLogueado.nombre;
-    } else{
+    } else {
         seccionLogueado.classList.remove("seccion-iconos-header");
         seccionLogueado.classList.add("invisible");
+        
+        const menuHamburguesa = document.getElementById("menu-hamburguesa-logueado");
+        menuHamburguesa?.classList.add("invisible");
+
+
     }
 })
 

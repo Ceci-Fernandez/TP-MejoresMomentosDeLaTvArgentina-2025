@@ -1,0 +1,131 @@
+.menu-hamburguesa {
+  display: none;
+  position: relative;
+  margin-left: auto;
+}
+
+.icono-hamburguesa {
+  background: none;
+  border: none;
+  font-size: 1.8em;
+  color: #145222;
+  cursor: pointer;
+
+}
+
+.menu-desplegable {
+  position: absolute;
+  top: 3.5em;
+  right: 0;
+  width: 10em; 
+  background-color: var(--light-color-fondo2);
+  border-radius: 0.5em;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+
+
+}
+
+.menu-desplegable ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-desplegable li {
+  margin: 0.5em 0;
+}
+
+.menu-desplegable a {
+  color: var(--dark-color-texto);
+  font-weight: 600;
+}
+
+.menu-desplegable a:hover {
+  color: var(--dark-color-acento-2);
+}
+
+.titulo-bienvenida {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.menu-buscador {
+  margin-bottom: 1em;
+}
+
+.menu-cerrar-sesion {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-cerrar-sesion .boton-cerrar-sesion {
+  width: 100%;
+  padding: 0.70em;
+  font-size: 1em;
+  border-radius: .8em;
+  background: #145222;
+  font-weight: 600;
+  font-family: 'Muli', sans-serif;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-cerrar-sesion .boton-cerrar-sesion:hover {
+  background-color: #00c46c;
+}
+
+.buscador-header {
+  border-radius: 2em;    
+  width: 100%;
+  box-sizing: border-box; 
+}
+.invisible {
+  display: none;
+}
+
+
+
+@media (max-width: 768px) {
+  #menu-hamburguesa-logueado {
+    display: none;
+  }
+   #menu-hamburguesa-logueado:not(.invisible) {
+    display: block;
+  }
+ 
+  
+  #boton-cerrar-sesion {
+    display: none; 
+  }
+  .seccion-iconos-header {
+    display: none;
+  }
+
+   .seccion-login.invisible {
+    display: none;
+  }
+
+
+  .caja-buscador-header {
+    display: flex; 
+    width: 45%;   }
+
+  .buscador-header {
+    padding: 0.5em 2em; 
+    font-size: 0.9em;   
+  }
+
+  .icono-lupa {
+    left: 8px;       
+    font-size: 0.9em;  
+  }
+
+
+}
