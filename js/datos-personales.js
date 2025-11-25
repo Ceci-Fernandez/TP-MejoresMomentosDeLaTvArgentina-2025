@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var btnCerrarSesion = document.getElementById("boton-cerrar-sesion");
   var nombreUsuarioLogueado = document.getElementById("nombre-usuario-logueado");
 
-  // Cargar datos del usuario desde localStorage si existen
+  
   var usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
   if (usuarioLogueado) {
     emailUsuario.value = usuarioLogueado.correo || "";
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
   btnCambiar.disabled = true;
   btnGuardar.disabled = true;
 
-  // Cambiar email y contraseña en localStorage
+  
   btnCambiar.addEventListener("click", function (e) {
     e.preventDefault();
     
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
       localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioActual));
       
-      // También actualizar usuarioRegistrado para que el login funcione con los nuevos datos
+      
       var usuarioRegistrado = JSON.parse(localStorage.getItem("usuarioRegistrado"));
       if (usuarioRegistrado) {
         usuarioRegistrado.correo = emailUsuario.value;
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Guardar cambios en el localStorage cuando se hace clic en "Guardar cambios"
+  
   btnGuardar.addEventListener("click", function (e) {
     e.preventDefault();
     
@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", function () {
   `;
   document.head.appendChild(style);
 
-  // Cerrar sesión - borrar datos del localStorage
+  
   btnCerrarSesion.addEventListener("click", function (e) {
     e.preventDefault();
     localStorage.removeItem("usuarioLogueado");
