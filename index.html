@@ -9,6 +9,7 @@
    <link rel="stylesheet" href="css/temas-colores-fuentes.css">
    <link rel="stylesheet" href="css/estilos-principal.css">
    <link rel="stylesheet" href="./css/estilos-header-footer.css">
+   <link rel="stylesheet" href="css/menu-hamburguesa.css">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 </head>
 
@@ -18,13 +19,36 @@
          <div class="caja-logo">
             <img class="logo" src="assets/img/logo3.png" alt="img de logo">
          </div>
+        
          <div id="buscador-header" class="caja-buscador-header">
             <span class="icono-lupa"><i class="fa-solid fa-magnifying-glass" style="color: #145222;"></i></span>
             <input type="text" id="buscador" placeholder="" class="buscador-header">
          </div>
-        <div id="seccion-logueado" class="seccion-iconos-header">
+          <!-- Menú hamburguesa-->
+         <div id="menu-hamburguesa-logueado" class="menu-hamburguesa invisible">
+            <button id="btnHamburguesa" class="icono-hamburguesa">
+               <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav id="menuDesplegable" class="menu-desplegable invisible">
+               <p class="titulo-bienvenida">Bienvenido, <span id="nombreUsuarioMenu"></span></p>
+            
+               <ul>
+                  <li>
+                     <a href="/html/datos-personales.html">
+                        <i class="fa-solid fa-user iconos-header"></i> Mi perfil
+                     </a>
+                  </li>
+               </ul>
+               <div class="menu-cerrar-sesion">
+                  <button id="btnCerrarSesionMenu" class="boton-cerrar-sesion">Cerrar sesión</button>
+               </div>
+            </nav>
+         </div>
+
+         <div id="seccion-logueado" class="seccion-iconos-header">
             <h4 id="nombre-usuario-logueado" class="nombre-usuario-logueado"></h4>
-            <a class="elementos-header iconos-header" href="/html/datos-personales.html"><i class="fa-solid fa-user" style="color: #145222;"></i></a>
+            <a class="elementos-header iconos-header" href="/html/datos-personales.html"><i class="fa-solid fa-user"
+                  style="color: #145222;"></i></a>
             <button id="boton-cerrar-sesion" class="boton-cerrar-sesion elementos-header">Cerrar Sesion</button>
          </div>
          <div id="seccion-sin-loguear" class="seccion-login">
@@ -481,17 +505,18 @@
          <p class="detalle-item" id="detalle-impacto">Impacto/Popularidad</p>
          <p class="detalle-item" id="detalle-rating">Puntuación <span id="estrella">5</span></p>
          <p class="detalle-item" id="detalle-hashTag"></p>
-           <button id="boton-favorito" class="boton-favorito">Agregar a favoritos</button>
+         <button id="boton-favorito" class="boton-favorito">Agregar a favoritos</button>
       </div>
    </div>
    <!-- INICIO | NO MODIFICAR/NO QUITAR: 'cargar-datos.js' realiza la carga de datos -->
    <script type="module" src="js/cargar-datos.js"></script>
    <!-- FIN | NO MODIFICAR/NO QUITAR: 'cargar-datos.js' realiza la carga de datos -->
    <script src="js/header.js"></script>
-   
+
    <script src="js/buscador.js"></script>
    <script src="/js/nav.js"></script>
    <script src="./js/indexLogueado.js"></script>
+   <script src="js/menu-hamburguesa.js"></script>
    <script type="module" src="js/index.js"></script>
 </body>
 

@@ -55,8 +55,12 @@ a{
 
 .icono-lupa{
    position: absolute;
-   left: 12px;
-   bottom: 6px;
+  left: 12px;
+  top: 50%;              
+  transform: translateY(-50%);
+  color: #145222;
+
+
 }
 
 .boton-acceder{
@@ -70,6 +74,10 @@ a{
     border: none;
     color: white;
     cursor: pointer;
+
+
+
+
 }
 
 .boton-cerrar-sesion{
@@ -176,6 +184,8 @@ margin: 0;
 }
 .iconos-header{
   font-size: 1em;
+  color:#145222;
+  margin: .3em;
 }
 
 
@@ -209,21 +219,12 @@ margin: 0;
     height: 3em;
   }
 
-  .icono-lupa{
-    display: none;
-  }
 
   .boton-acceder{
     font-size: small;
   }
 
-  .buscador-header {
-    border-radius: 1em;
-    width: 100%;
-    padding: 0.10em;
-    border-color: gray;
-    background-color: #F2F3F3;
-}
+ 
 
 .nombre-usuario-logueado{
   font-size: .8em;
