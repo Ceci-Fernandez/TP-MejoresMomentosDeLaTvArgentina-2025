@@ -235,40 +235,11 @@ margin: 0;
     width: 27.5%;
 }
 
-.caja-buscador-header {
-    display: flex;
-    width: 25%;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-  input, select {
-    width: 100%;
-    padding: 0.5em;
-  }
-
-.seccion-iconos-header {
-    width: 37.5%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-  .icono-lupa{
-    display: none;
-  }
 
   .boton-acceder{
     font-size: small;
   }
 
-  .buscador-header {
-    border-radius: 1em;
-    width: 100%;
-    padding: .50em;
-    border-color: gray;
-    background-color: #F2F3F3;
-}
 
 .nombre-usuario-logueado{ 
   font-size: .8em;
@@ -280,7 +251,7 @@ margin: 0;
 }
 
 .boton-cerrar-sesion { 
-        font-size: .8em;
+ font-size: .8em;
 }
 
 /*.caja-logo.caja-logo-sinloguear{

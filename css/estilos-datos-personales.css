@@ -164,6 +164,7 @@ position: relative;
 }
 
 
+
 @media (max-width: 768px) {
   .menu-lista h1 {
     font-size: 1.6em;
@@ -175,12 +176,13 @@ position: relative;
   }
 
   .menu-aside-perfil {
-    width: 40%; 
+    width: 40%;
+    margin-bottom: 1em;
   }
 
   .contenedor-favoritos {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 1.2rem;
     padding: 1.5rem;
   }
 
@@ -190,37 +192,37 @@ position: relative;
   }
 
   .btn {
-    width: 8em;
-    font-size: 0.9rem;
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.6em;
   }
 
   .btn-quitar {
+    width: auto;
     padding: 0.4em 0.6em;
     font-size: 0.85rem;
   }
 
-  input, select {
-    width: 80%; 
-    padding: 0.4em;
+  .opcion-menu-content input,
+  .opcion-menu-content select {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.5em;
   }
 }
 
-
 @media (max-width: 480px) {
   .menu-lista h1 {
-    font-size: 1.2em;
-  }
-  .menu-lista{
-    font-size: 0.7em;
+    font-size: 1.3em;
   }
 
   .menu-lista li {
-    font-size: 0.8em;
+    font-size: 0.9em;
     padding: 0.3em;
   }
 
   .menu-aside-perfil {
-    width: 100%; 
+    width: 100%;
     margin-bottom: 1em;
   }
 
@@ -248,12 +250,11 @@ position: relative;
     font-size: 0.9rem;
     margin-top: 0.5em;
   }
-  #btn-cambiar{
-  width: 70%;
+
+  .opcion-menu-content input,
+  .opcion-menu-content select {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.5em;
   }
-  #btn-guardar{
-  width: 70%;
-
-
-}
 }
