@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
   var usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
   if (usuarioLogueado) {
-    emailUsuario.value = usuarioLogueado.correo || "";
+    emailUsuario.value = usuarioLogueado.email || "";
     passwordUsuario.value = usuarioLogueado.contrasenia || "";
     nombre.value = usuarioLogueado.nombre || "";
     apellido.value = usuarioLogueado.apellido || "";
@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     var usuarioActual = JSON.parse(localStorage.getItem("usuarioLogueado"));
     if (usuarioActual) {
-      usuarioActual.correo = emailUsuario.value;
+      usuarioActual.email = emailUsuario.value;
       usuarioActual.contrasenia = passwordUsuario.value;
       usuarioActual.fechaActualizacion = new Date().toISOString();
       
@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
       var usuarioRegistrado = JSON.parse(localStorage.getItem("usuarioRegistrado"));
       if (usuarioRegistrado) {
-        usuarioRegistrado.correo = emailUsuario.value;
+        usuarioRegistrado.email = emailUsuario.value;
         usuarioRegistrado.contrasenia = passwordUsuario.value;
         localStorage.setItem("usuarioRegistrado", JSON.stringify(usuarioRegistrado));
       }
