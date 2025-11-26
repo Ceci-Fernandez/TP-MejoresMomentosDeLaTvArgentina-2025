@@ -23,8 +23,35 @@
             <span class="icono-lupa"><i class="fa-solid fa-magnifying-glass" style="color: #145222;"></i></span>
             <input type="text" id="buscador" placeholder="" class="buscador-header">
          </div>
-         <div>
-            <a class="boton-acceder" id="btnAcceder" href="/html/login.html">Accede</a>
+          <!-- Menú hamburguesa-->
+         <div id="menu-hamburguesa-logueado" class="menu-hamburguesa invisible">
+            <button id="btnHamburguesa" class="icono-hamburguesa">
+               <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav id="menuDesplegable" class="menu-desplegable invisible">
+               <p class="titulo-bienvenida">Bienvenido, <span id="nombreUsuarioMenu"></span></p>
+            
+               <ul>
+                  <li>
+                     <a href="/html/datos-personales.html">
+                        <i class="fa-solid fa-user iconos-header"></i> Mi perfil
+                     </a>
+                  </li>
+               </ul>
+               <div class="menu-cerrar-sesion">
+                  <button id="btnCerrarSesionMenu" class="boton-cerrar-sesion">Cerrar sesión</button>
+               </div>
+            </nav>
+         </div>
+
+         <div id="seccion-logueado" class="seccion-iconos-header">
+            <h4 id="nombre-usuario-logueado" class="nombre-usuario-logueado"></h4>
+            <a class="elementos-header iconos-header" href="/html/datos-personales.html"><i class="fa-solid fa-user"
+                  style="color: #145222;"></i></a>
+            <button id="boton-cerrar-sesion" class="boton-cerrar-sesion elementos-header">Cerrar Sesion</button>
+         </div>
+         <div id="seccion-sin-loguear" class="seccion-login sin-loguear">
+            <button class="boton-acceder btn-sinloguear" id="btnAcceder">Accede</button>
          </div>
       </section>
    </header>
@@ -49,11 +76,11 @@
 
    <main>
       <nav id="navegacion-categoria">
-         <a href="#" id="tab-categoria-1" class="tab-categoria">Noticiero</a>
-         <a href="#" id="tab-categoria-2" class="tab-categoria">Película/Serie</a>
-         <a href="#" id="tab-categoria-3" class="tab-categoria">Deporte</a>
-         <a href="#" id="tab-categoria-4" class="tab-categoria">Farándula/Programa TV</a>
-         <a href="#" id="tab-categoria-5" class="tab-categoria">Política</a>
+         <a href="#tab-categoria-1" id="tab-categoria-1" class="tab-categoria">Noticiero</a>
+         <a href="#tab-categoria-2" id="tab-categoria-2" class="tab-categoria">Película/Serie</a>
+         <a href="#tab-categoria-3" id="tab-categoria-3" class="tab-categoria">Deporte</a>
+         <a href="#tab-categoria-4" id="tab-categoria-4" class="tab-categoria">Farándula/Programa TV</a>
+         <a href="#tab-categoria-5" id="tab-categoria-5" class="tab-categoria">Política</a>
       </nav>
 
       <section id="seccion-filtros">
@@ -435,24 +462,24 @@
             </ul>
          </div>
          <div id="footer-principal-centro" class="columna-footer">
-        <h4>Categorias</h4>
-        <ul>
-          <li><a href="#tab-categoria-1">Noticiero</a></li>
-          <li><a href="#tab-categoria-2">Peliculas/series</a></li>
-          <li><a href="#tab-categoria-3">Deportes</a></li>
-          <li><a href="#tab-categoria-4">Farándula/programa</a></li>
-          <li><a href="#tab-categoria-5">Política</a></li>
-        </ul>
-      </div>
+            <h4>Categorias</h4>
+            <ul>
+               <li><a href="#">Noticiero</a></li>
+               <li><a href="#">Peliculas/series</a></li>
+               <li><a href="#">Deportes</a></li>
+               <li><a href="#">Farándula/programa</a></li>
+               <li><a href="#">Política</a></li>
+            </ul>
+         </div>
 
          <div id="footer-principal-derecha" class="columna-footer">
             <h4>Seguinos en redes sociales</h4>
             <div class="logos_redes">
-               <a href="https://www.facebook.com/UnlamOficial/?locale=es_LA"><img src="/assets/logos-redes/facebook.png"
+               <a href="https://www.facebook.com/UnlamOficial/?locale=es_LA"><img src="assets/logos-redes/facebook.png"
                      alt="facebook_logo"></a>
-               <a href="https://www.youtube.com/c/UNLaMOficial"><img src="/assets/logos-redes/youtube (1).png"
+               <a href="https://www.youtube.com/c/UNLaMOficial"><img src="assets/logos-redes/youtube (1).png"
                      alt="youtube.logo"></a>
-               <a href="https://www.instagram.com/unlamoficial/?hl=es"><img src="/assets/logos-redes/instagram (2).png"
+               <a href="https://www.instagram.com/unlamoficial/?hl=es"><img src="assets/logos-redes/instagram (2).png"
                      alt="instagram_logo"></a>
             </div>
          </div>
@@ -490,8 +517,6 @@
    <script src="./js/indexLogueado.js"></script>
    <script src="js/menu-hamburguesa.js"></script>
    <script type="module" src="js/index.js"></script>
-   <script src="js/buscador.js"></script>
-   <script src="/js/nav.js"></script>
 </body>
 
 </html>
