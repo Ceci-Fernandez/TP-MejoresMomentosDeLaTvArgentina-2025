@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../css/temas-colores-fuentes.css">
   <link rel="stylesheet" href="../css/estilos-principal.css">
   <link rel="stylesheet" href="../css/estilos-header-footer.css">
-  <link rel="stylesheet" href="../css/menu-hamburguesa.css">
+  <link rel="stylesheet" href="/css/menu-hamburguesa.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <title>Mi Perfil</title>
 </head>
@@ -20,6 +20,33 @@
            <a href="../index.html"> <img class="logo" src="../assets/img/logo3.png" alt="img de logo" ></a>
            
          </div>
+         
+          <!-- Menú hamburguesa-->
+         <div id="menu-hamburguesa-logueado" class="menu-hamburguesa invisible">
+            <button id="btnHamburguesa" class="icono-hamburguesa">
+               <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav id="menuDesplegable" class="menu-desplegable invisible">
+               <p class="titulo-bienvenida">Bienvenido, <span id="nombreUsuarioMenu"></span></p>
+            
+               <ul>
+                 <li>
+                     <a href="../index.html">
+                         <i class="fa-solid fa-house iconos-header"></i> Home
+                     </a>
+                  </li>
+                  <li>
+                     <a href="/html/datos-personales.html">
+                        <i class="fa-solid fa-user iconos-header"></i> Mi perfil
+                     </a>
+                  </li>
+               </ul>
+               <div class="menu-cerrar-sesion">
+                  <button id="btnCerrarSesionMenu" class="boton-cerrar-sesion">Cerrar sesión</button>
+               </div>
+            </nav>
+         </div>
+
         <div id="seccion-logueado" class="seccion-iconos-header">
             <h4 id="nombre-usuario-logueado" class="nombre-usuario-logueado"></h4>
             <a class="elementos-header iconos-header" href="./datos-personales.html"><i class="fa-solid fa-user" style="color: #145222;"></i></a>
@@ -149,8 +176,10 @@
            <button id="boton-favorito" class="boton-favorito">Agregar a favoritos</button>
       </div>
    </div>
-  <script type="module" src="../js/favoritos.js"></script>
+  <script type="module" src="/js/favoritos.js"></script>
   <script type="module" src="../js/datos-personales.js"></script>
+  <script src="/js/menu-hamburguesa.js"></script>
+
 </body>
 
 </html>
