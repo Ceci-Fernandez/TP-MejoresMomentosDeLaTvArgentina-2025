@@ -26,8 +26,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.8em;
-
-
 }
 
 .menu-desplegable ul {
@@ -93,13 +91,15 @@
 
 
 @media (max-width: 768px) {
-  #menu-hamburguesa-logueado {
+#menu-hamburguesa-logueado {
     display: none;
-  }
-   #menu-hamburguesa-logueado:not(.invisible) {
-    display: block;
-  }
- 
+}
+
+#menu-hamburguesa-logueado:not(.invisible) {
+    display: flex;
+    width: 27.5%;
+    justify-content: flex-end;
+}
   
   #boton-cerrar-sesion {
     display: none; 
@@ -112,7 +112,6 @@
     display: none;
   }
 
-
   .caja-buscador-header {
     display: flex; 
     width: 45%;   }
@@ -123,8 +122,7 @@
   }
 
   .icono-lupa {
-    left: 8px;       
-    font-size: 0.9em;  
+    display: none; 
   }
 
 
