@@ -1,5 +1,5 @@
 
-import items from "/data/items.json" with { type: "json" };
+import items from "../data/items.json" with { type: "json" };
 import { toggleFavorito, aplicarFavoritos, renderFavoritosPerfil } from "./favoritos.js";
 import { mostrarPopup } from "./popUp.js";
 
