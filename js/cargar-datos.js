@@ -36,15 +36,16 @@ function cargarCategoria(linkCategoria) {
 
 linksCategorias.forEach((linkCategoria) => {
    linkCategoria.addEventListener("click", () => {
+      linksCategorias.forEach(tab => tab.classList.remove('activa'));
+      linkCategoria.classList.add('activa');
       cargarCategoria(linkCategoria);
    });
 });
-
-// Verificar si hay un anchor en la URL al cargar la página
 window.addEventListener("hashchange", () => {
    const hash = window.location.hash.substring(1);
    const tabActivo = document.getElementById(hash);
    if (tabActivo && tabActivo.classList.contains("tab-categoria")) {
+      linksCategorias.forEach(tab => tab.classList.remove('activa'));
       tabActivo.classList.add("activa");
       cargarCategoria(tabActivo);
    }
@@ -55,10 +56,13 @@ document.addEventListener("DOMContentLoaded", () => {
    if (hash) {
       const tabActivo = document.getElementById(hash);
       if (tabActivo && tabActivo.classList.contains("tab-categoria")) {
+         linksCategorias.forEach(tab => tab.classList.remove('activa'));
          tabActivo.classList.add("activa");
          cargarCategoria(tabActivo);
       }
    } else if (configuracion["modo-test-prod"] === "prod") {
+      linksCategorias.forEach(tab => tab.classList.remove('activa'));
+      tabCategoria1.classList.add('activa');
       tabCategoria1.click();
    }
 });
