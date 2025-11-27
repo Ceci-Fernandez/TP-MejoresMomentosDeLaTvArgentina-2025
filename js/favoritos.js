@@ -16,8 +16,11 @@ export function getUsuario() {
 
 export function toggleFavorito(idItem) {
   const usuario = getUsuario()
-  if (!usuario) return
-
+  if (!usuario) {
+    alert("Debes iniciar sesión para agregar favoritos.");
+    window.location.href = "/html/login.html";
+    return;
+  }
   const index = usuario.favoritos.indexOf(idItem)
   if (index === -1) {
     usuario.favoritos.push(idItem)
