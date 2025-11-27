@@ -19,6 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   btnCerrarSesionMenu.addEventListener("click", () => {
     localStorage.removeItem("usuarioLogueado");
-    window.location.href = "/index.html";
+    window.location.href = "../index.html";
   });
 });
