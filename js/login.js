@@ -81,10 +81,11 @@ formularioLogin.addEventListener("submit", (e) => {
 function validarLogin(correo, contrasenia){ //Despues corregir las key para que funcione bien con las que estan en el REGISTRAR
   // const correoGuardado = localStorage.getItem("correo"); 
   // const contraseniaGuardada = localStorage.getItem("contrasenia");
-  const usuarioRegistrado = JSON.parse(localStorage.getItem("usuarioRegistrado"));
+  const usuariosRegistrados = JSON.parse(localStorage.getItem("usuariosRegistrados"));
+  const usuarioEncontrado = usuariosRegistrados.find(usuarioActual => usuarioActual.email === correo && usuarioActual.contrasenia === contrasenia);
 
-  if(correo === usuarioRegistrado.email && contrasenia === usuarioRegistrado.contrasenia){
-    localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioRegistrado));
+  if(usuarioEncontrado){
+    localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioEncontrado));
     window.location.href = "/index.html";
     
   }

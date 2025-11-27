@@ -137,7 +137,14 @@ formularioRegistro.addEventListener("submit", (e) => {
       
     };
 
-    localStorage.setItem("usuarioRegistrado", JSON.stringify(usuarioRegistrado));
+   const usuariosRegistrados = JSON.parse(localStorage.getItem("usuariosRegistrados")) || [];
+
+   const usuarioRepetido = usuariosRegistrados.find(usuarioActual => usuarioRegistrado.email === usuarioActual.email)
+
+    if (!usuarioRepetido) {
+    usuariosRegistrados.push(usuarioRegistrado);
+
+    localStorage.setItem("usuariosRegistrados", JSON.stringify(usuariosRegistrados));
 
 
     alert("Registro exitoso");
@@ -147,6 +154,15 @@ formularioRegistro.addEventListener("submit", (e) => {
     
 
     document.querySelectorAll(".error-texto").forEach(e => e.remove());
+
+    window.location.href = "/html/login.html";
+
+    }
+    else{
+      alert("Correo ya registrado");
+    }
+
+    
   }
 });
 
