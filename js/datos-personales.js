@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     localStorage.removeItem("usuarioLogueado");
     alert("Sesión cerrada correctamente!");
-    window.location.href = "/index.html";
+    window.location.href = "../index.html";
   });
 
   renderFavoritosPerfil();

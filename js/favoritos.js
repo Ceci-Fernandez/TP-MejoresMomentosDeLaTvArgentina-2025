@@ -1,5 +1,5 @@
 
-import items from "/data/items.json" with { type: "json" }
+import items from "../data/items.json" with { type: "json" }
 import { mostrarPopup } from "./popUp.js"
 
 
@@ -18,7 +18,7 @@ export function toggleFavorito(idItem) {
   const usuario = getUsuario()
   if (!usuario) {
     alert("Debes iniciar sesión para agregar favoritos.");
-    window.location.href = "/html/login.html";
+    window.location.href = "../html/login.html";
     return;
   }
   const index = usuario.favoritos.indexOf(idItem)

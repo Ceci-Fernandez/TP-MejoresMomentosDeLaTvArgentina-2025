@@ -23,13 +23,13 @@ window.addEventListener("load", () => {
 
 btnCerrarSesion.addEventListener("click", () => {
     localStorage.removeItem("usuarioLogueado");
-    window.location.href = "/index.html";
+    window.location.href = "../index.html";
 });
 
 btnCerrarSesion.addEventListener("mouseover", () => {
     btnCerrarSesion.style.backgroundColor = "#00c46c";
-}); //al pasar el mouse 
+}); 
 
 btnCerrarSesion.addEventListener("mouseleave", () => {
     btnCerrarSesion.style.backgroundColor = "#145222";
-}); //cuando saco el mouse 
+}); 
